@@ -5,6 +5,8 @@ import { FocusComponent } from './focus/focus.component';
 import { EditorialComponent } from './editorial/editorial.component';
 import { NewsComponent } from './news/news.component';
 import { ArticleComponent } from './article/article.component';
+import { TextMediaLeftComponent } from './text-media-left/text-media-left.component';
+import { TextMediaRightComponent } from './text-media-right/text-media-right.component';
 
 
 const routes: Routes = [
@@ -27,6 +29,14 @@ const routes: Routes = [
   {
     path: 'article',
     component: ArticleComponent
+  },
+  {
+    path: 'text-media-left',
+    component: TextMediaLeftComponent
+  },
+  {
+    path: 'text-media-right',
+    component: TextMediaRightComponent
   }
 ];
 

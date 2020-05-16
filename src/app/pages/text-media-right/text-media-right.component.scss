@@ -1,0 +1,16 @@
+.textRed {
+    color: red;
+}
+
+.wrapText {
+    font-size: 3.8em;
+}
+
+@media only screen and (max-width: 600px) {
+    .contentMP {
+        width: 100% !important;
+        padding: 16px !important;
+        margin: 0 !important;
+        margin-bottom: 58px !important;
+    }
+}
