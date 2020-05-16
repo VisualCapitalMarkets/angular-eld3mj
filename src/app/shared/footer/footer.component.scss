@@ -1,0 +1,105 @@
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+
+    button {
+        border: 0;
+        cursor: pointer;
+
+        svg {
+            font-size: 34px;
+            display: flex;
+            align-self: center;
+        }
+
+        .rotate90 {
+            -webkit-transform: rotate(90deg);
+            -moz-transform: rotate(90deg);
+            -o-transform: rotate(90deg);
+            -ms-transform: rotate(90deg);
+            transform: rotate(90deg);
+        }
+
+        .rotate360 {
+            -webkit-transform: rotate(360deg);
+            -moz-transform: rotate(360deg);
+            -o-transform: rotate(360deg);
+            -ms-transform: rotate(360deg);
+            transform: rotate(360deg);
+        }
+    }
+
+    .logoImg {
+        height: 40px;
+    }
+
+    .footer-center {
+        width: 100%;
+        position: absolute;
+        border-top: 1px solid darkgray;
+
+        button {
+            border-left: 1px solid;
+            border-radius: 0;
+            border-right: 1px solid;
+        }
+    }
+
+    .right {
+        .customDromUpButton {
+            padding: 0;
+            background-color: transparent;
+            border-radius: 2px;
+        }
+
+        .dropdown-menu {
+            border: 0;
+            border-radius: 0;
+            border-bottom: 1px solid darkgray;
+            width: calc(50vw + 64px);
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .footer {
+        .collapse {
+            max-height: 95vh;
+            overflow: auto;
+
+            .card-body {
+                padding: 0.5rem;
+
+                .card-text {
+                    font-size: .8em;
+                }
+            }
+        }
+
+        .footerLogo {
+            .logoImg {
+                display: none !important;
+            }
+        }
+    
+        .right {
+            .webIcon {
+                display: none;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .mobileIcon {
+        display: none;
+    }
+
+    .mobileNavHeader {
+        display: none !important;
+    }
+}
