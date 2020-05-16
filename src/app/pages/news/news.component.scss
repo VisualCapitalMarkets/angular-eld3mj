@@ -1,0 +1,23 @@
+.tab {
+    background-color: #666666;
+}
+
+.hr {
+    border-bottom: 5px solid red;
+}
+
+.title {
+    border-top: 3px solid #666666;
+    border-bottom: 3px solid #666666;
+}
+
+.description {
+    font-size: .8em;
+}
+
+@media only screen and (max-width: 600px) {
+    .contentMP {
+        margin: 8px !important;
+        margin-bottom: 58px !important;
+    }
+}

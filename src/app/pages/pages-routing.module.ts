@@ -3,6 +3,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { FocusComponent } from './focus/focus.component';
 import { EditorialComponent } from './editorial/editorial.component';
+import { NewsComponent } from './news/news.component';
+import { ArticleComponent } from './article/article.component';
 
 
 const routes: Routes = [
@@ -17,6 +19,14 @@ const routes: Routes = [
   {
     path: 'editorial',
     component: EditorialComponent
+  },
+  {
+    path: 'news',
+    component: NewsComponent
+  },
+  {
+    path: 'article',
+    component: ArticleComponent
   }
 ];
 
