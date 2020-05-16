@@ -7,6 +7,7 @@ import { NewsComponent } from './news/news.component';
 import { ArticleComponent } from './article/article.component';
 import { TextMediaLeftComponent } from './text-media-left/text-media-left.component';
 import { TextMediaRightComponent } from './text-media-right/text-media-right.component';
+import { TopicComponent } from './topic/topic.component';
 
 
 const routes: Routes = [
@@ -37,6 +38,10 @@ const routes: Routes = [
   {
     path: 'text-media-right',
     component: TextMediaRightComponent
+  },
+  {
+    path: 'topic',
+    component: TopicComponent
   }
 ];
 

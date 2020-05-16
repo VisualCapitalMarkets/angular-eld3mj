@@ -9,10 +9,11 @@ import { NewsComponent } from './news/news.component';
 import { ArticleComponent } from './article/article.component';
 import { TextMediaLeftComponent } from './text-media-left/text-media-left.component';
 import { TextMediaRightComponent } from './text-media-right/text-media-right.component';
+import { TopicComponent } from './topic/topic.component';
 
 
 @NgModule({
-  declarations: [HomeComponent, FocusComponent, EditorialComponent, NewsComponent, ArticleComponent, TextMediaLeftComponent, TextMediaRightComponent],
+  declarations: [HomeComponent, FocusComponent, EditorialComponent, NewsComponent, ArticleComponent, TextMediaLeftComponent, TextMediaRightComponent, TopicComponent],
   imports: [
     CommonModule,
     PagesRoutingModule
