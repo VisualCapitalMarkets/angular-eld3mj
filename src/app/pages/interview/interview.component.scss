@@ -1,0 +1,39 @@
+.leftPanel {
+    img {
+        object-fit: cover;
+        object-position: center;
+        height: 100vh;
+        width: 100%;
+    }
+}
+
+.rightPanel {
+    max-height: 100vh;
+}
+
+.textRed {
+    color: red;
+}
+
+.wrapText {
+    font-size: 3.8em;
+}
+
+@media only screen and (max-width: 600px) {
+    .contentMP {
+        width: 100% !important;
+        padding: 16px !important;
+        margin: 0 !important;
+        margin-bottom: 58px !important;
+    }
+
+    .leftPanel {
+        img {
+            height: 100%;
+        }
+    }
+
+    .rightPanel {
+        overflow: inherit !important;
+    }
+}
