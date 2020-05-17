@@ -8,6 +8,7 @@ import { ArticleComponent } from './article/article.component';
 import { TextMediaLeftComponent } from './text-media-left/text-media-left.component';
 import { TextMediaRightComponent } from './text-media-right/text-media-right.component';
 import { TopicComponent } from './topic/topic.component';
+import { InterviewComponent } from './interview/interview.component';
 
 
 const routes: Routes = [
@@ -42,6 +43,10 @@ const routes: Routes = [
   {
     path: 'topic',
     component: TopicComponent
+  },
+  {
+    path: 'interview',
+    component: InterviewComponent
   }
 ];
 
