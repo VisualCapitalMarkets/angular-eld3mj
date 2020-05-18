@@ -11,6 +11,7 @@ import { TopicComponent } from './topic/topic.component';
 import { InterviewComponent } from './interview/interview.component';
 import { SlidingTopComponent } from './sliding-top/sliding-top.component';
 import { SlidingRightComponent } from './sliding-right/sliding-right.component';
+import { KiosqueComponent } from './kiosque/kiosque.component';
 
 
 const routes: Routes = [
@@ -57,6 +58,10 @@ const routes: Routes = [
   {
     path: 'sliding-right',
     component: SlidingRightComponent
+  },
+  {
+    path: 'kiosque',
+    component: KiosqueComponent
   }
 ];
 

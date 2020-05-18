@@ -13,10 +13,11 @@ import { TopicComponent } from './topic/topic.component';
 import { InterviewComponent } from './interview/interview.component';
 import { SlidingTopComponent } from './sliding-top/sliding-top.component';
 import { SlidingRightComponent } from './sliding-right/sliding-right.component';
+import { KiosqueComponent } from './kiosque/kiosque.component';
 
 
 @NgModule({
-  declarations: [HomeComponent, FocusComponent, EditorialComponent, NewsComponent, ArticleComponent, TextMediaLeftComponent, TextMediaRightComponent, TopicComponent, InterviewComponent, SlidingTopComponent, SlidingRightComponent],
+  declarations: [HomeComponent, FocusComponent, EditorialComponent, NewsComponent, ArticleComponent, TextMediaLeftComponent, TextMediaRightComponent, TopicComponent, InterviewComponent, SlidingTopComponent, SlidingRightComponent, KiosqueComponent],
   imports: [
     CommonModule,
     PagesRoutingModule

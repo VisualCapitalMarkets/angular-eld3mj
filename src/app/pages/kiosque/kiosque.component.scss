@@ -1,0 +1,23 @@
+.container-fluid {
+    height: 100vh;
+}
+
+.socialLinkGroup {
+    position: absolute;
+    bottom: 96px;
+}
+
+@media only screen and (max-width:600px) {
+    .container-fluid {
+        padding-left: 24px !important;
+        padding-right: 24px !important;
+
+        .logoFluid {
+            width: 100%;
+        }
+    
+        .description {
+            width: 100% !important;
+        }
+    }
+}
