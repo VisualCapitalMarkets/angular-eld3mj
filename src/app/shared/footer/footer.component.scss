@@ -33,36 +33,50 @@
         }
     }
 
-    .logoImg {
-        height: 40px;
-    }
-
-    .footer-center {
-        width: 100%;
-        position: absolute;
+    .navbar {
         border-top: 1px solid darkgray;
+        height: 80px;
 
-        button {
-            border-left: 1px solid;
-            border-radius: 0;
-            border-right: 1px solid;
+        .footerLogo {
+            margin-left: 16px;
+        }
+
+        .logoImg {
+            height: 40px;
+        }
+    
+        .footer-center {
+            width: 100%;
+            position: absolute;
+            height: 80px;
+            // border-top: 1px solid darkgray;
+    
+            button {
+                border-left: 1px solid;
+                border-radius: 0;
+                border-right: 1px solid;
+            }
+        }
+    
+        .right {
+            .customDromUpButton {
+                padding: 0;
+                background-color: transparent;
+                border-radius: 2px;
+            }
+    
+            .dropdown-menu {
+                border: 0;
+                border-radius: 0;
+                border-bottom: 1px solid darkgray;
+                width: calc(50vw + 64px);
+            }
         }
     }
+}
 
-    .right {
-        .customDromUpButton {
-            padding: 0;
-            background-color: transparent;
-            border-radius: 2px;
-        }
-
-        .dropdown-menu {
-            border: 0;
-            border-radius: 0;
-            border-bottom: 1px solid darkgray;
-            width: calc(50vw + 64px);
-        }
-    }
+.icon {
+    width: 36px;
 }
 
 @media only screen and (max-width: 600px) {
@@ -80,15 +94,23 @@
             }
         }
 
-        .footerLogo {
-            .logoImg {
-                display: none !important;
+        .navbar {
+            height: 58px;
+
+            .footerLogo {
+                .logoImg {
+                    display: none !important;
+                }
             }
-        }
-    
-        .right {
-            .webIcon {
-                display: none;
+        
+            .right {
+                .webIcon {
+                    display: none;
+                }
+            }
+
+            .footer-center {
+                height: 58px;
             }
         }
     }
