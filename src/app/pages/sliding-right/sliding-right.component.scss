@@ -1,0 +1,32 @@
+.leftPanel {
+    .tab {
+        background-color: #666666;
+    }
+
+    .hr {
+        border-bottom: 5px solid red;
+    }
+
+    .textRed {
+        color: red;
+    }
+
+    .wrapText {
+        font-size: 3.8em;
+    }
+
+    .playMark {
+        max-height: 100vh;
+        bottom: 140px;
+        margin-top: 75vh;
+        // margin-right: -56px;
+    }
+
+    .customPlayIcon {
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 16px 0 16px 30px;
+        border-color: transparent transparent transparent #ffffff;
+    }
+}

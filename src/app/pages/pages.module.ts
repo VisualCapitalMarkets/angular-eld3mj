@@ -11,10 +11,12 @@ import { TextMediaLeftComponent } from './text-media-left/text-media-left.compon
 import { TextMediaRightComponent } from './text-media-right/text-media-right.component';
 import { TopicComponent } from './topic/topic.component';
 import { InterviewComponent } from './interview/interview.component';
+import { SlidingTopComponent } from './sliding-top/sliding-top.component';
+import { SlidingRightComponent } from './sliding-right/sliding-right.component';
 
 
 @NgModule({
-  declarations: [HomeComponent, FocusComponent, EditorialComponent, NewsComponent, ArticleComponent, TextMediaLeftComponent, TextMediaRightComponent, TopicComponent, InterviewComponent],
+  declarations: [HomeComponent, FocusComponent, EditorialComponent, NewsComponent, ArticleComponent, TextMediaLeftComponent, TextMediaRightComponent, TopicComponent, InterviewComponent, SlidingTopComponent, SlidingRightComponent],
   imports: [
     CommonModule,
     PagesRoutingModule
