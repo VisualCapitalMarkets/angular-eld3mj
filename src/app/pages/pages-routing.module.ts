@@ -15,6 +15,7 @@ import { KiosqueComponent } from './kiosque/kiosque.component';
 import { ChiffresComponent } from './chiffres/chiffres.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ImpressumComponent } from './impressum/impressum.component';
+import { AdvertisingComponent } from './advertising/advertising.component';
 
 
 const routes: Routes = [
@@ -73,6 +74,10 @@ const routes: Routes = [
   {
     path: 'impressum',
     component: ImpressumComponent
+  },
+  {
+    path: 'advertising',
+    component: AdvertisingComponent
   },
 ];
 

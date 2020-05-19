@@ -18,10 +18,11 @@ import { SplashScreenComponent } from './splash-screen/splash-screen.component';
 import { ChiffresComponent } from './chiffres/chiffres.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ImpressumComponent } from './impressum/impressum.component';
+import { AdvertisingComponent } from './advertising/advertising.component';
 
 
 @NgModule({
-  declarations: [HomeComponent, FocusComponent, EditorialComponent, NewsComponent, ArticleComponent, TextMediaLeftComponent, TextMediaRightComponent, TopicComponent, InterviewComponent, SlidingTopComponent, SlidingRightComponent, KiosqueComponent, SplashScreenComponent, ChiffresComponent, PortfolioComponent, ImpressumComponent],
+  declarations: [HomeComponent, FocusComponent, EditorialComponent, NewsComponent, ArticleComponent, TextMediaLeftComponent, TextMediaRightComponent, TopicComponent, InterviewComponent, SlidingTopComponent, SlidingRightComponent, KiosqueComponent, SplashScreenComponent, ChiffresComponent, PortfolioComponent, ImpressumComponent, AdvertisingComponent],
   imports: [
     CommonModule,
     PagesRoutingModule
