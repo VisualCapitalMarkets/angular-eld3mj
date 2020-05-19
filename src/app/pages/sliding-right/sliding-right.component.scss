@@ -1,4 +1,7 @@
 .leftPanel {
+    max-height: 100vh;
+    overflow: hidden;
+
     .tab {
         background-color: #666666;
     }
@@ -30,9 +33,15 @@
     }
 }
 
+.maxHeight {
+    max-height: 100vh;
+    overflow: hidden;
+}
+
 @media only screen and (max-width: 600px) {
     .leftPanel {
         padding-bottom: 0 !important;
+        max-width: none !important;
     }
 
     .playMark {
@@ -40,5 +49,10 @@
         margin: 0 !important;
         left: 50% !important;
         transform: translateX(-50%);
+    }
+
+    .maxHeight {
+        max-height: none !important;
+        overflow: hidden;
     }
 }

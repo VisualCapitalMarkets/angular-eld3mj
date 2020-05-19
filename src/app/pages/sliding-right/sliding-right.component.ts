@@ -7,9 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SlidingRightComponent implements OnInit {
 
+  rightPanelSlideNumber = 0;
+  maxSlideNumber = 1;
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  next(): void {
+    this.rightPanelSlideNumber++;
+    if (this.rightPanelSlideNumber > this.maxSlideNumber) {
+      this.rightPanelSlideNumber = 0;
+    }
+    console.log('next!')
   }
 
 }
