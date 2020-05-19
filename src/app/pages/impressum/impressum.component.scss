@@ -1,5 +1,43 @@
-.carousel-indicators li {
-    width: 10px;
-    height: 10px;
-    border-radius: 100%;
+.container-fluid {
+  background-color: #da1c5f;
+  height: 100vh;
+
+  .content {
+    background-color: #da1c5f;
+    position: absolute;
+    padding: 8em;
+    padding-left: 10em;
+    height: calc(100% - 80px);
+
+    .tab {
+        font-size: 2em;
+        background-color: rgba($color: black, $alpha: .5);
+
+        .borderBottomRed {
+            width: 40%;
+            border-bottom: 4px solid red;
+        }
+
+        .borderBottomWhite {
+            width: 60%;
+            border-bottom: 4px solid white;
+        }
+    }
+
+    .row {
+      img {
+        max-width: 680px;
+      }
+    }
   }
+}
+
+@media only screen and (max-width: 600px) {
+  .container-fluid {
+    height: 150vh;
+
+    .content {
+      padding: 1em !important;
+    }
+  }
+}
