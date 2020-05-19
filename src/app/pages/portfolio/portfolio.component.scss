@@ -12,7 +12,8 @@
 
 .content {
     position: absolute;
-    margin-left: 10em !important;
+    padding: 8em !important;
+    padding-left: 10em !important;
 
     .tab {
         font-size: 2em;
@@ -29,33 +30,9 @@
         }
     }
 
-    .space {
-        height: 25vh;
-    }
-
-    .card {
-        max-width: 30em;
-        background-color: #666666;
-
-        .plus {
-            font-size: 3em;
-            position: absolute;
-            right: 8px;
-        }
-    }
-}
-
-@media only screen and (max-width: 600px) {
-    .space {
-        height: 10vh !important;
-    }
-
-    .content {
-        margin-left: auto !important;
-
-        .card {
-            margin-left: 16px !important;
-            margin-right: 16px !important;
-        }
+    .txtCarosel {
+        position: absolute;
+        bottom: 280px;
+        width: 30%;
     }
 }

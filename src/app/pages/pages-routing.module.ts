@@ -13,6 +13,7 @@ import { SlidingTopComponent } from './sliding-top/sliding-top.component';
 import { SlidingRightComponent } from './sliding-right/sliding-right.component';
 import { KiosqueComponent } from './kiosque/kiosque.component';
 import { ChiffresComponent } from './chiffres/chiffres.component';
+import { PortfolioComponent } from './portfolio/portfolio.component';
 
 
 const routes: Routes = [
@@ -63,6 +64,10 @@ const routes: Routes = [
   {
     path: 'chiffres',
     component: ChiffresComponent
+  },
+  {
+    path: 'portfolio',
+    component: PortfolioComponent
   },
 ];
 

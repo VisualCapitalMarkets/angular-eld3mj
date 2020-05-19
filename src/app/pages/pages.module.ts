@@ -16,10 +16,11 @@ import { SlidingRightComponent } from './sliding-right/sliding-right.component';
 import { KiosqueComponent } from './kiosque/kiosque.component';
 import { SplashScreenComponent } from './splash-screen/splash-screen.component';
 import { ChiffresComponent } from './chiffres/chiffres.component';
+import { PortfolioComponent } from './portfolio/portfolio.component';
 
 
 @NgModule({
-  declarations: [HomeComponent, FocusComponent, EditorialComponent, NewsComponent, ArticleComponent, TextMediaLeftComponent, TextMediaRightComponent, TopicComponent, InterviewComponent, SlidingTopComponent, SlidingRightComponent, KiosqueComponent, SplashScreenComponent, ChiffresComponent],
+  declarations: [HomeComponent, FocusComponent, EditorialComponent, NewsComponent, ArticleComponent, TextMediaLeftComponent, TextMediaRightComponent, TopicComponent, InterviewComponent, SlidingTopComponent, SlidingRightComponent, KiosqueComponent, SplashScreenComponent, ChiffresComponent, PortfolioComponent],
   imports: [
     CommonModule,
     PagesRoutingModule
