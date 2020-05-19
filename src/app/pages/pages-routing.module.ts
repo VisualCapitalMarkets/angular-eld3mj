@@ -14,6 +14,7 @@ import { SlidingRightComponent } from './sliding-right/sliding-right.component';
 import { KiosqueComponent } from './kiosque/kiosque.component';
 import { ChiffresComponent } from './chiffres/chiffres.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
+import { ImpressumComponent } from './impressum/impressum.component';
 
 
 const routes: Routes = [
@@ -68,6 +69,10 @@ const routes: Routes = [
   {
     path: 'portfolio',
     component: PortfolioComponent
+  },
+  {
+    path: 'impressum',
+    component: ImpressumComponent
   },
 ];
 
