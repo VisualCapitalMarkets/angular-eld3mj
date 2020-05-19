@@ -13,6 +13,7 @@
 .content {
     position: absolute;
     margin-left: 10em !important;
+    font-size: 16px;
 
     .tab {
         font-size: 2em;
@@ -34,20 +35,29 @@
     }
 
     .card {
-        max-width: 30em;
+        max-width: 26em;
+        min-height: 24em;
+        height: 40%;
         background-color: #666666;
 
-        .plus {
-            font-size: 3em;
+        .cardFooter {
             position: absolute;
-            right: 8px;
+            bottom: 0;
+            width: 100%;
+
+            .plus {
+                font-size: 2.2em;
+                position: absolute;
+                right: 8px;
+                background-color: transparent;
+            }
         }
     }
 }
 
 @media only screen and (max-width: 600px) {
     .space {
-        height: 10vh !important;
+        height: 5vh !important;
     }
 
     .content {
@@ -56,6 +66,7 @@
         .card {
             margin-left: 16px !important;
             margin-right: 16px !important;
+            min-height: 62vh !important;
         }
     }
 }

@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./topic.component.scss']
 })
 export class TopicComponent implements OnInit {
-
+  openStatus = 0;
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  changeStatus(status): void {
+    this.openStatus = status;
   }
 
 }
