@@ -59,10 +59,6 @@ const routes: Routes = [
     path: 'sliding-right',
     component: SlidingRightComponent
   },
-  {
-    path: 'kiosque',
-    component: KiosqueComponent
-  }
 ];
 
 @NgModule({

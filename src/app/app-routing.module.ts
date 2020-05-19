@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { LayoutComponent } from './layout/layout.component';
+import { KiosqueComponent } from './pages/kiosque/kiosque.component';
 
 
 const routes: Routes = [
@@ -13,6 +14,10 @@ const routes: Routes = [
         loadChildren: () => import('./pages/pages.module').then(m => m.PagesModule)
       }
     ]
+  },
+  {
+    path: 'kiosque',
+    component: KiosqueComponent
   }
 ];
 
