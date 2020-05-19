@@ -6,10 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sliding-top.component.scss']
 })
 export class SlidingTopComponent implements OnInit {
+  displayTextIndex = 3;
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  convertText(ScreenIndex) {
+    this.displayTextIndex = ScreenIndex;
+    console.log(ScreenIndex);
   }
 
 }
