@@ -12,6 +12,7 @@ import { InterviewComponent } from './interview/interview.component';
 import { SlidingTopComponent } from './sliding-top/sliding-top.component';
 import { SlidingRightComponent } from './sliding-right/sliding-right.component';
 import { KiosqueComponent } from './kiosque/kiosque.component';
+import { ChiffresComponent } from './chiffres/chiffres.component';
 
 
 const routes: Routes = [
@@ -58,6 +59,10 @@ const routes: Routes = [
   {
     path: 'sliding-right',
     component: SlidingRightComponent
+  },
+  {
+    path: 'chiffres',
+    component: ChiffresComponent
   },
 ];
 
