@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { LayoutComponent } from './layout/layout.component';
 import { KiosqueComponent } from './pages/kiosque/kiosque.component';
+import { SplashScreenComponent } from './pages/splash-screen/splash-screen.component';
 
 
 const routes: Routes = [
@@ -18,6 +19,10 @@ const routes: Routes = [
   {
     path: 'kiosque',
     component: KiosqueComponent
+  },
+  {
+    path: 'splash-screen',
+    component: SplashScreenComponent
   }
 ];
 
