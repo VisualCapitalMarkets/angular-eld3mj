@@ -9,15 +9,15 @@
             display: block;
             object-fit: cover;
             object-position: center;
-            height: 100%;
+            height: calc(100% - 80px);
             width: auto;
         }
     }
 
     .text {
         position: absolute;
-        margin-top: 23rem;
-        margin-left: 17rem;
+        margin-top: 20%;
+        margin-left: 17%;
 
         .title1 {
             color: white;
@@ -51,16 +51,10 @@
     }
 
     @media only screen and (max-width: 600px) {
-        // .background {
-        //     img {
-        //         height: 100%;
-        //         width: auto;
-        //     }
-        // }
-
-        .text {
-            margin: 16px;
-            padding: 16px;
+        .background {
+            img {
+                height: calc(100% - 58px);
+            }
         }
 
         .title1 {

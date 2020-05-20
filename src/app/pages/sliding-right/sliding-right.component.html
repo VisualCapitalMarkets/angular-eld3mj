@@ -148,7 +148,12 @@
                 <div class="customPlayIcon"></div>
             </button>
         </div>
-        <div *ngIf="rightPanelSlideNumber == 0" class="col-md-6 col-sm-12 p-5 bgOrange w-100 maxHeight">
+
+        <div *ngIf="rightPanelSlideNumber == 0" class="col-md-6 col-sm-12 p-0 w-100 maxHeight">
+            <img class="w-100" src="assets/images/image right.png">
+        </div>
+
+        <div *ngIf="rightPanelSlideNumber == 1" class="col-md-6 col-sm-12 p-5 bgOrange w-100 maxHeight">
             <div class="m-md-3 mx-md-5 m-sm-0">
                 <p class="my-3 text-justify text-white">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
@@ -189,10 +194,5 @@
                 </p>
             </div>
         </div>
-
-        <div *ngIf="rightPanelSlideNumber == 1" class="col-md-6 col-sm-12 p-0 w-100 maxHeight">
-            <img class="w-100" src="assets/images/image right.png">
-        </div>
-
     </div>
 </div>
