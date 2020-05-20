@@ -62,33 +62,71 @@
             </button>
         </div>
         <div class="right d-flex justify-content-end">
-            <div class="btn-group dropup mobileIcon">
+            <div class="dropup mobileIcon">
                 <button type="button" class="btn btn-primary m-2 customDromUpButton" data-toggle="dropdown">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="dropdown-menu dropdown-menu-right m-0 mb-2 p-0">
                     <li>
-                        <button class="navbar-toggler w-100 d-flex justify-content-around align-items-center">
-                            <img class="retate90"
-                                src="https://img.icons8.com/material-rounded/24/000000/view-module.png" />
-                            <p class="m-0">Kiosk</p>
-                        </button>
+                        <div class="dropup">
+                            <button class="navbar-toggler btn w-100 d-flex justify-content-around align-items-center"
+                                type="button" id="KioskDropUpButton" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">
+                                <img class="retate90"
+                                    src="https://img.icons8.com/material-rounded/24/000000/view-module.png" />
+                                <p class="m-0">Kiosk</p>
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="KioskDropUpButton">
+                                <img class="w-100 h-100" src="assets/images/kiosque.png">
+                            </div>
+                        </div>
                     </li>
                     <li>
-                        <button class="navbar-toggler w-100 d-flex justify-content-around align-items-center">
-                            <img src="https://img.icons8.com/material-outlined/24/000000/share.png" />
-                            <p class="m-0">Share</p>
-                        </button>
+                        <div class="dropup">
+                            <button class="navbar-toggler btn w-100 d-flex justify-content-around align-items-center"
+                                type="button" id="socialSharingDropUpButton" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">
+                                <img src="https://img.icons8.com/material-outlined/24/000000/share.png" />
+                                <p class="m-0">Share</p>
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="socialSharingDropUpButton">
+                                <div class="row w-100 m-0">
+                                    <img class="col px-1 icon" src="assets/icons/facebook.svg">
+                                    <img class="col px-1 icon" src="assets/icons/linkedin.svg">
+                                    <img class="col px-1 icon" src="assets/icons/twitter.svg">
+                                    <img class="col px-1 icon" src="assets/icons/youtube.svg">
+                                    <img class="col px-1 icon" src="assets/icons/instagram.svg">
+                                </div>
+                            </div>
+                        </div>
                     </li>
                 </div>
             </div>
-            <div class="webIcon">
-                <button class="navbar-toggler">
-                    <img class="rotate90" src="https://img.icons8.com/material-rounded/24/000000/view-module.png" />
-                </button>
-                <button class="navbar-toggler">
-                    <img class="rotate360" src="https://img.icons8.com/material-outlined/24/000000/share.png" />
-                </button>
+            <div class="webIcon d-flex">
+                <div class="dropup">
+                    <button class="navbar-toggler btn" type="button" id="KioskDropUpButton" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <img class="rotate90" src="https://img.icons8.com/material-rounded/24/000000/view-module.png" />
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="KioskDropUpButton">
+                        <img class="w-100 h-100" src="assets/images/kiosque.png">
+                    </div>
+                </div>
+                <div class="dropup">
+                    <button class="navbar-toggler btn" type="button" id="socialSharingDropUpButton"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <img class="rotate360" src="https://img.icons8.com/material-outlined/24/000000/share.png" />
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="socialSharingDropUpButton">
+                        <div class="row w-100 m-0">
+                            <img class="col px-1 icon" src="assets/icons/facebook.svg">
+                            <img class="col px-1 icon" src="assets/icons/linkedin.svg">
+                            <img class="col px-1 icon" src="assets/icons/twitter.svg">
+                            <img class="col px-1 icon" src="assets/icons/youtube.svg">
+                            <img class="col px-1 icon" src="assets/icons/instagram.svg">
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </nav>

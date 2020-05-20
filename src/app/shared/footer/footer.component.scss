@@ -63,12 +63,18 @@
                 background-color: transparent;
                 border-radius: 2px;
             }
-    
-            .dropdown-menu {
-                border: 0;
-                border-radius: 0;
-                border-bottom: 1px solid darkgray;
-                width: calc(50vw + 64px);
+            
+            .mobileIcon {
+                .dropdown-menu {
+                    border: 0;
+                    border-radius: 0;
+                    border-bottom: 1px solid darkgray;
+                    width: calc(50vw + 64px);
+
+                    .dropdown-menu {
+                        width: min-content;
+                    }
+                }
             }
         }
     }
@@ -76,6 +82,15 @@
 
 .icon {
     width: 36px;
+}
+
+.dropup:hover>.dropdown-menu {
+    display: block;
+}
+
+.dropup>.dropdown-toggle:active {
+    /*Without this, clicking will make it sticky*/
+    pointer-events: none;
 }
 
 @media only screen and (max-width: 600px) {
@@ -104,7 +119,7 @@
         
             .right {
                 .webIcon {
-                    display: none;
+                    display: none !important;
                 }
             }
 
