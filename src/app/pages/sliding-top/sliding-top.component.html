@@ -2,7 +2,8 @@
     <div class="background">
         <img src="assets/images/GrandTheatre005.png">
     </div>
-    <div *ngIf="displayTextIndex !== 1" class="content w-100 h-100 row m-0">
+    <div *ngIf="displayTextIndex !== 1 && displayTextIndex !== 2 && displayTextIndex !== 3"
+        class="content w-100 h-100 row m-0">
         <div class="col-md-8 col-sm-12 p-md-5">
             <div class="tab d-inline-block">
                 <p class="m-0 p-2 px-3 text-white">Strategie</p>
@@ -19,7 +20,7 @@
     </div>
     <div class="topTextLayer h-100 row m-0">
         <div *ngIf="displayTextIndex == 1" class="rightText col-md-4 col-sm-12 h-100 p-0">
-            <div class="opacity h-100 p-5">
+            <div class="opacity p-5">
                 <div class="my-3 text-justify text-white">
                     <h1 class="wrapText textRed font-weight-bold float-left m-0 mr-2">L</h1>
                     <p>
@@ -62,9 +63,10 @@
                 </div>
             </div>
         </div>
+        <div *ngIf="displayTextIndex !== 1" class="col-md-4 col-sm-12 h-100 p-0 d-none d-md-block"></div>
 
         <div *ngIf="displayTextIndex == 2" class="rightText col-md-4 col-sm-12 h-100 p-0">
-            <div class="opacity h-100 p-5">
+            <div class="opacity p-5">
                 <div class="my-3 text-justify text-white">
                     <h1 class="wrapText textRed font-weight-bold float-left m-0 mr-2">L</h1>
                     <p>
@@ -107,9 +109,10 @@
                 </div>
             </div>
         </div>
+        <div *ngIf="displayTextIndex !== 2" class="col-md-4 col-sm-12 h-100 p-0 d-none d-md-block"></div>
 
         <div *ngIf="displayTextIndex == 3" class="rightText col-md-4 col-sm-12 h-100 p-0">
-            <div class="opacity h-100 p-5">
+            <div class="opacity p-5">
                 <div class="my-3 text-justify text-white">
                     <h1 class="wrapText textRed font-weight-bold float-left m-0 mr-2">L</h1>
                     <p>
@@ -152,6 +155,8 @@
                 </div>
             </div>
         </div>
+        <div *ngIf="displayTextIndex !== 3" class="col-md-4 col-sm-12 h-100 p-0 d-none d-md-block"></div>
+
     </div>
     <div class="NumberMarkDiv">
         <div class="row m-0">
@@ -172,3 +177,4 @@
             </div>
         </div>
     </div>
+</div>

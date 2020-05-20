@@ -39,9 +39,10 @@
     
     .rightText {
         overflow: auto;
+        max-height: calc(100% - 60px);
+        background-color: rgba(255, 255, 255, 0.5) !important;
 
         .opacity {
-            background-color: rgba(255, 255, 255, 0.5) !important;
 
             h1 {
                 font-size: 3.3em;
@@ -86,14 +87,18 @@
 @media only screen and (max-width: 600px) {
     .content {
         margin-left: auto !important;
+    }
 
+    .topTextLayer { 
         .NumberMarkDiv {
             position: initial;
             margin-bottom: 16px;
         }
 
         .rightText {
-            max-height: 60%;
+            .opacity {
+                height: initial!important;
+            }
         }
     }
 }
