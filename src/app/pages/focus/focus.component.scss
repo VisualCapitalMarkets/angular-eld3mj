@@ -23,6 +23,7 @@
         .rightPanel {
             width: 100%;
             padding: 0 86px;
+            max-height: calc(100vh - 160px);
 
             .focus {
                 background-color: #858585;
@@ -51,21 +52,10 @@
                 border: 0;
                 background: transparent;
             }
-
-            .scrollText {
-                max-height: 400px;
-            }
         }
     }
 
-    @media only screen and (max-width: 600px) {
-        // .background {
-        //     img {
-        //         height: 100%;
-        //         width: auto;
-        //     }
-        // }
-
+@media only screen and (max-width: 600px) {
         .content {
             .rightPanel {
                 margin: 16px;

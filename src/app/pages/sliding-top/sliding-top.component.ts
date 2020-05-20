@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sliding-top.component.scss']
 })
 export class SlidingTopComponent implements OnInit {
-  displayTextIndex = 3;
+  displayTextIndex = 0;
 
   constructor() { }
 

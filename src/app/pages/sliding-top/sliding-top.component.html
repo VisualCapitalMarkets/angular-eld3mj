@@ -18,8 +18,8 @@
         <div class="col-md-4"></div>
     </div>
     <div class="topTextLayer h-100 row m-0">
-        <div class="rightText col-md-4 col-sm-12 h-100 p-0">
-            <div *ngIf="displayTextIndex == 1" class="opacity h-100 p-5">
+        <div *ngIf="displayTextIndex == 1" class="rightText col-md-4 col-sm-12 h-100 p-0">
+            <div class="opacity h-100 p-5">
                 <div class="my-3 text-justify text-white">
                     <h1 class="wrapText textRed font-weight-bold float-left m-0 mr-2">L</h1>
                     <p>
@@ -59,19 +59,12 @@
                         error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab
                         illo
                     </p>
-                </div>
-            </div>
-            <div class="NumberMarkDiv">
-                <div class="d-flex justify-content-around">
-                    <button *ngIf="displayTextIndex !== 1"
-                        class="numberMark px-3 bgOrange rounded-lg border-0 text-white font-weight-bold"
-                        (click)="convertText(1)">1</button>
                 </div>
             </div>
         </div>
 
-        <div class="rightText col-md-4 col-sm-12 h-100 p-0">
-            <div *ngIf="displayTextIndex == 2" class="opacity h-100 p-5">
+        <div *ngIf="displayTextIndex == 2" class="rightText col-md-4 col-sm-12 h-100 p-0">
+            <div class="opacity h-100 p-5">
                 <div class="my-3 text-justify text-white">
                     <h1 class="wrapText textRed font-weight-bold float-left m-0 mr-2">L</h1>
                     <p>
@@ -111,19 +104,12 @@
                         error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab
                         illo
                     </p>
-                </div>
-            </div>
-            <div class="NumberMarkDiv">
-                <div class="d-flex justify-content-around">
-                    <button *ngIf="displayTextIndex !== 2"
-                        class="numberMark px-3 bgOrange rounded-lg border-0 text-white font-weight-bold"
-                        (click)="convertText(2)">2</button>
                 </div>
             </div>
         </div>
 
-        <div class="rightText col-md-4 col-sm-12 h-100 p-0">
-            <div *ngIf="displayTextIndex == 3" class="opacity h-100 p-5">
+        <div *ngIf="displayTextIndex == 3" class="rightText col-md-4 col-sm-12 h-100 p-0">
+            <div class="opacity h-100 p-5">
                 <div class="my-3 text-justify text-white">
                     <h1 class="wrapText textRed font-weight-bold float-left m-0 mr-2">L</h1>
                     <p>
@@ -163,15 +149,26 @@
                         error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab
                         illo
                     </p>
-                </div>
-            </div>
-            <div class="NumberMarkDiv">
-                <div class="d-flex justify-content-around">
-                    <button *ngIf="displayTextIndex !== 3"
-                        class="numberMark px-3 bgOrange rounded-lg border-0 text-white font-weight-bold"
-                        (click)="convertText(3)">3</button>
                 </div>
             </div>
         </div>
     </div>
-</div>
+    <div class="NumberMarkDiv">
+        <div class="row m-0">
+            <div class="col d-flex justify-content-center">
+                <button *ngIf="displayTextIndex !== 1"
+                    class="numberMark px-3 bgOrange rounded-lg border-0 text-white font-weight-bold"
+                    (click)="convertText(1)">1</button>
+            </div>
+            <div class="col d-flex justify-content-center">
+                <button *ngIf="displayTextIndex !== 2"
+                    class="numberMark px-3 bgOrange rounded-lg border-0 text-white font-weight-bold"
+                    (click)="convertText(2)">2</button>
+            </div>
+            <div class="col d-flex justify-content-center">
+                <button *ngIf="displayTextIndex !== 3"
+                    class="numberMark px-3 bgOrange rounded-lg border-0 text-white font-weight-bold"
+                    (click)="convertText(3)">3</button>
+            </div>
+        </div>
+    </div>
