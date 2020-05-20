@@ -75,14 +75,46 @@
     bottom: 0 !important;
 }
 
-// @media only screen and (max-width: 1662px) {
-//     .background {
-//         img {
-//             height: 100%;
-//             width: auto;
-//         }
-//     }
-// }
+.animated {
+    // background-image: url(/css/images/logo.png);
+    background-repeat: no-repeat;
+    background-position: left top;
+    /* padding-top: 95px;
+    margin-bottom: 60px; */
+    -webkit-animation-duration: 1.5s;
+    animation-duration: 1.5s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@-webkit-keyframes fadeInDown {
+    0% {
+        /* opacity: 0; */
+        -webkit-transform: translateY(100%);
+    }
+
+    100% {
+        /* opacity: 1; */
+        -webkit-transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    0% {
+        /* opacity: 0; */
+        transform: translateY(100%);
+    }
+
+    100% {
+        /* opacity: 1; */
+        transform: translateY(0);
+    }
+}
+
+.fadeInDown {
+    -webkit-animation-name: fadeInDown;
+    animation-name: fadeInDown;
+}
 
 @media only screen and (max-width: 600px) {
     .content {

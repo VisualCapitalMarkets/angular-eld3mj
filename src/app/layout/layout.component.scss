@@ -1,4 +1,7 @@
 .container-fluid {
+    overflow: hidden;
+    max-height: 100%;
+    
     .content {
         margin-bottom: 58px;
     }
