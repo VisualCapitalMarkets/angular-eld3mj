@@ -1,7 +1,6 @@
 .my-container {
     display: flex;
     padding: 0;
-
     .background {
         img {
             max-width: 100%;
@@ -9,39 +8,16 @@
             display: block;
             object-fit: cover;
             object-position: center;
-            height: calc(100% - 80px);
+            height: calc(100% - 60px);
             width: auto;
         }
     }
-
     .text {
         position: absolute;
         margin-top: 20%;
         margin-left: 17%;
-
-        .title1 {
-            color: white;
-            font-size: 3.8em;
-        }
-        .title2 {
-            color: white;
-            font-size: 3.8em;
-            font-weight: bold;
-        }
-        .line {
-            color: white;
-            margin: 2.5rem 0;
-            width: 170px;
-            height: 2px;
-            background: white;
-        }
-        .description {
-            color: white;
-            margin: 2.5rem 0;
-            font-size: 1.5rem;
-        }
+        color: white;
         button {
-            background-color: #ff2323;
             border: 0;
             padding: 0.6rem 1.8rem;
             color: white;
@@ -49,22 +25,14 @@
             cursor: pointer;
         }
     }
-
     @media only screen and (max-width: 600px) {
         .background {
             img {
                 height: calc(100% - 58px);
             }
         }
-
-        .title1 {
-            color: white;
-            font-size: 1.6em !important;
-        }
-        .title2 {
-            color: white;
-            font-size: 2.2em !important;
-            font-weight: bold;
+        .text {
+            margin: 1rem !important;
         }
     }
 }

@@ -1,12 +1,26 @@
 <div class="container-fluid">
     <div class="row content">
         <div class="col-12 p-0">
-            <router-outlet></router-outlet>
+            <app-home *ngIf="tempIndex === 0" [data]="pageData"></app-home>
+            <app-focus *ngIf="tempIndex === 1" [data]="pageData"></app-focus>
+            <app-editorial *ngIf="tempIndex === 2" [data]="pageData"></app-editorial>
+            <app-news *ngIf="tempIndex === 3" [data]="pageData"></app-news>
+            <app-article *ngIf="tempIndex === 4"></app-article>
+            <app-text-media-left *ngIf="tempIndex === 5"></app-text-media-left>
+            <app-text-media-right *ngIf="tempIndex === 6"></app-text-media-right>
+            <app-topic *ngIf="tempIndex === 7"></app-topic>
+            <app-interview *ngIf="tempIndex === 8"></app-interview>
+            <app-sliding-top *ngIf="tempIndex === 9"></app-sliding-top>
+            <app-sliding-right *ngIf="tempIndex === 10"></app-sliding-right>
+            <app-chiffres *ngIf="tempIndex === 11"></app-chiffres>
+            <app-portfolio *ngIf="tempIndex === 12"></app-portfolio>
+            <app-impressum *ngIf="tempIndex === 13"></app-impressum>
+            <app-advertising *ngIf="tempIndex === 14"></app-advertising>
         </div>
     </div>
     <div class="row">
         <div class="col-12">
-            <app-footer></app-footer>
+            <app-footer (onPrevIndex)="prevPage()" (onNextIndex)="nextPage()"></app-footer>
         </div>
     </div>
 </div>

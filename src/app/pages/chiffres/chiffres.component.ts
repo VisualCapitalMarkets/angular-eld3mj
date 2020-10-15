@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-chiffres',
@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./chiffres.component.scss']
 })
 export class ChiffresComponent implements OnInit {
+  @Input() data;
 
   constructor() { }
 

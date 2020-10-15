@@ -9,12 +9,12 @@ const routes: Routes = [
   {
     path: '',
     component: LayoutComponent,
-    children: [
-      {
-        path: '',
-        loadChildren: () => import('./pages/pages.module').then(m => m.PagesModule)
-      }
-    ]
+    // children: [
+    //   {
+    //     path: '',
+    //     loadChildren: () => import('./pages/pages.module').then(m => m.PagesModule)
+    //   }
+    // ]
   },
   {
     path: 'kiosque',

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-kiosque',
@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./kiosque.component.scss']
 })
 export class KiosqueComponent implements OnInit {
+  @Input() data;
 
   constructor() { }
 

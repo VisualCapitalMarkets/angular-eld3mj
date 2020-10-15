@@ -3,9 +3,7 @@
         <div class="bg-light p-4">
             <div class="mobileNavHeader">
                 <div class="d-flex justify-content-end">
-                    <button class="navbar-toggler" type="button" data-toggle="collapse"
-                        data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
-                        aria-expanded="false" aria-label="Toggle navigation">X</button>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">X</button>
                 </div>
                 <img class="logoImg" src="assets/images/logo.jpg">
             </div>
@@ -49,15 +47,13 @@
             <img class="logoImg" src="assets/images/logo.jpg">
         </div>
         <div class="footer-center d-flex justify-content-center">
-            <button class="navbar-toggler p-1">
+            <button class="navbar-toggler p-1" (click)="prevIndex()">
                 <img class="icon" src="assets/icons/left_chevron.svg">
             </button>
-            <button class="navbar-toggler p-1" type="button" data-toggle="collapse"
-                data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
-                aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler p-1" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
                 <img class="icon" src="assets/icons/central_menu.png">
             </button>
-            <button class="navbar-toggler p-1">
+            <button class="navbar-toggler p-1" (click)="nextIndex()">
                 <img class="icon" src="assets/icons/right_chevron.svg">
             </button>
         </div>
@@ -69,9 +65,7 @@
                 <div class="dropdown-menu dropdown-menu-right m-0 mb-2 p-0">
                     <li>
                         <div class="dropup">
-                            <button class="navbar-toggler btn w-100 d-flex justify-content-around align-items-center"
-                                type="button" id="KioskDropUpButton" data-toggle="dropdown" aria-haspopup="true"
-                                aria-expanded="false">
+                            <button class="navbar-toggler btn w-100 d-flex justify-content-around align-items-center" type="button" id="KioskDropUpButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <img class="retate90"
                                     src="https://img.icons8.com/material-rounded/24/000000/view-module.png" />
                                 <p class="m-0">Kiosk</p>
@@ -83,9 +77,7 @@
                     </li>
                     <li>
                         <div class="dropup">
-                            <button class="navbar-toggler btn w-100 d-flex justify-content-around align-items-center"
-                                type="button" id="socialSharingDropUpButton" data-toggle="dropdown" aria-haspopup="true"
-                                aria-expanded="false">
+                            <button class="navbar-toggler btn w-100 d-flex justify-content-around align-items-center" type="button" id="socialSharingDropUpButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <img src="https://img.icons8.com/material-outlined/24/000000/share.png" />
                                 <p class="m-0">Share</p>
                             </button>
@@ -104,8 +96,7 @@
             </div>
             <div class="webIcon d-flex">
                 <div class="dropup">
-                    <button class="navbar-toggler btn" type="button" id="KioskDropUpButton" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">
+                    <button class="navbar-toggler btn" type="button" id="KioskDropUpButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <img class="rotate90" src="https://img.icons8.com/material-rounded/24/000000/view-module.png" />
                     </button>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="KioskDropUpButton">
@@ -113,8 +104,7 @@
                     </div>
                 </div>
                 <div class="dropup">
-                    <button class="navbar-toggler btn" type="button" id="socialSharingDropUpButton"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <button class="navbar-toggler btn" type="button" id="socialSharingDropUpButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <img class="rotate360" src="https://img.icons8.com/material-outlined/24/000000/share.png" />
                     </button>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="socialSharingDropUpButton">

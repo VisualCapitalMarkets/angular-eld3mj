@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-sliding-top',
@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SlidingTopComponent implements OnInit {
   displayTextIndex = 0;
+  @Input() data;
 
   constructor() { }
 

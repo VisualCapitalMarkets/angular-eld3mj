@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, Output, EventEmitter } from '@angular/core';
 import { OverlayModule } from '@angular/cdk/overlay';
 
 @Component({
@@ -9,13 +9,15 @@ import { OverlayModule } from '@angular/cdk/overlay';
 
 export class FooterComponent implements OnInit {
   // @ViewChild("tref", { read: ElementRef }) tref: ElementRef;
-
   cardItems = [
     { text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, send do eiusmod em siemprensi' },
     { text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, send do eiusmod em siemprensi' },
     { text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, send do eiusmod em siemprensi' },
     { text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, send do eiusmod em siemprensi' },
   ]
+
+  @Output() onNextIndex: EventEmitter<any> = new EventEmitter()
+  @Output() onPrevIndex: EventEmitter<any> = new EventEmitter()
 
   constructor() { }
 
@@ -26,7 +28,6 @@ export class FooterComponent implements OnInit {
     // outputs `I am span`
     // console.log(this.tref);
     // console.log(this.tref.nativeElement);
-
   }
 
   openDropdown(): void {
@@ -41,4 +42,11 @@ export class FooterComponent implements OnInit {
     // console.log(close);
   }
 
+  nextIndex() {
+    this.onNextIndex.emit();
+  }
+
+  prevIndex() {
+    this.onPrevIndex.emit();
+  }
 }

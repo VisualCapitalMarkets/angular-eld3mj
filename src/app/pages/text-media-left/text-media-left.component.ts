@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-text-media-left',
@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./text-media-left.component.scss']
 })
 export class TextMediaLeftComponent implements OnInit {
+  @Input() data;
 
   constructor() { }
 
