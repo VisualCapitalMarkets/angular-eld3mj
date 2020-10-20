@@ -1,4 +1,12 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { SafeHtml } from '@angular/platform-browser';
+
+export interface Content {
+  title: SafeHtml,
+  text1: SafeHtml,
+  text2: SafeHtml,
+  text3: SafeHtml
+}
 
 @Component({
   selector: 'app-sliding-top',
@@ -8,10 +16,12 @@ import { Component, Input, OnInit } from '@angular/core';
 export class SlidingTopComponent implements OnInit {
   displayTextIndex = 0;
   @Input() data;
+  content: Content;
 
   constructor() { }
 
   ngOnInit(): void {
+    this.content = this.data?.content;
   }
 
   convertText(ScreenIndex) {

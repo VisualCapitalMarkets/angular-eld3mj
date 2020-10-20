@@ -1,8 +1,9 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, Input, OnInit, QueryList, ViewChildren } from '@angular/core';
+import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 
 export interface Content {
-  title: string,
-  text: string,
+  title: SafeHtml,
+  text: SafeHtml,
   image: string,
   imageIndex: number
 }
@@ -12,16 +13,46 @@ export interface Content {
   templateUrl: './news.component.html',
   styleUrls: ['./news.component.scss']
 })
-export class NewsComponent implements OnInit {
+export class NewsComponent implements OnInit, AfterViewInit {
   @Input() data;
   content: Content[];
+  @ViewChildren('articles') articlesElement: QueryList<ElementRef>;
 
-  constructor() { }
+  constructor(
+    private _sanitizer: DomSanitizer
+  ) { }
 
   ngOnInit(): void {
-    console.log('content: ', this.content);
-
     this.content = this.data?.content;
+    console.log('content: ', this.content);
+    // this.content = this.content.map(article => {
+    //   return {
+    //     title: this._sanitizer.bypassSecurityTrustHtml(String(article.title)),
+    //     text: this._sanitizer.bypassSecurityTrustHtml(String(article.text)),
+    //     image: article.image,
+    //     imageIndex: article.imageIndex
+    //   }
+    // });
   }
 
+  ngAfterViewInit(): void {
+    this.content?.map((article, index) => {
+      let image = this.articlesElement.toArray()[index].nativeElement.querySelector('img');
+      if (article.imageIndex > 0) {
+        this.setImagePosition(image, article.imageIndex);
+      }
+    });
+  }
+
+  setImagePosition(elem_choice, times) {
+    var span = elem_choice.parentNode,
+    td = span.parentNode;
+    let i = times;
+    while(i > 0) {
+      if (span.nextElementSibling) {
+        td.insertBefore(span, span.nextElementSibling.nextElementSibling)
+      }
+      i--;
+    }
+  }
 }

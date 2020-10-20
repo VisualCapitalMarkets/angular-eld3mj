@@ -1,31 +1,28 @@
 <div class="container-fluid p-5">
     <div class="row h-100 m-0">
         <div class="col-md-6 col-sm-12 p-md-5 p-sm-0">
-            <img src="assets/images/newlogo_BF2020.png">
+            <img class="logo" [src]="info?.logo">
             <br>
-            <img class="logoFluid" src="assets/images/logo.jpg">
+            <div class="title"> {{ info?.title }} </div>
             <div class="description w-50">
-                <div class="my-3">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                    labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-                    ut
-                    aliquip ex ea commodo consequat.
-                </div>
-                <div class="my-3">
-                    ing elit, sed do eiusmod tempor incididunt ut
-                    labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-                    ut
-                    aliquip ex ea commodo consequat.
-                </div>
-                <div class="socialLinkGroup d-flex align-items-center w-50">
+                <div [innerHTML]="info?.description"></div>
+                <div class="socialLinkGroup d-flex align-items-center mt-5">
                     <div class="row w-100 m-0">
-                        <img class="col icon" src="assets/icons/facebook.svg">
-                        <img class="col icon" src="assets/icons/linkedin.svg">
-                        <img class="col icon" src="assets/icons/twitter.svg">
-                        <img class="col icon" src="assets/icons/youtube.svg">
-                        <img class="col icon" src="assets/icons/instagram.svg">
+                        <a [href]="info?.facebook" class="col pl-0">
+                            <img class="icon" src="assets/icons/facebook.svg">
+                        </a>
+                        <a [href]="info?.linkedin" class="col">
+                            <img class="icon" src="assets/icons/linkedin.svg">
+                        </a>
+                        <a [href]="info?.twitter" class="col">
+                            <img class="icon" src="assets/icons/twitter.svg">
+                        </a>
+                        <a [href]="info?.youtube" class="col">
+                            <img class="icon" src="assets/icons/youtube.svg">
+                        </a>
+                        <a [href]="info?.instagram" class="col pr-0">
+                            <img class="icon" src="assets/icons/instagram.svg">
+                        </a>
                         <p class="copyright text-justify mt-3">
                             @2020 - D-mag est une marque de Visual Capital Markets SA | Genēve
                         </p>
@@ -35,24 +32,12 @@
         </div>
         <div class="col-md-6 col-sm-12 p-md-5 p-sm-0">
             <div class="h-100">
-                <img class="w-100" src="assets/images/1-cover_v2.png">
-                <p>#00 - JUNE 2020</p>
+                <img class="w-100" [src]="info?.collections[0]?.backgroundImage" (click)="gotoCollection(0)">
+                <p> {{ info?.collections[0]?.name }} </p>
                 <div class="row m-0">
-                    <div class="col-6 p-0 pr-2">
-                        <img class="w-100" src="assets/images/Rectangle1.png">
-                        <p>#00 - MAY 2020</p>
-                    </div>
-                    <div class="col-6 p-0 pl-2">
-                        <img class="w-100" src="assets/images/Rectangle2.png">
-                        <p>#00 - APRIL 2020</p>
-                    </div>
-                    <div class="col-6 p-0 pr-2">
-                        <img class="w-100" src="assets/images/Rectangle3.png">
-                        <p>#00 - MARCH 2020</p>
-                    </div>
-                    <div class="col-6 p-0 pl-2">
-                        <img class="w-100" src="assets/images/Rectangle4.png">
-                        <p>#00 - FEBRUARY 2020</p>
+                    <div class="col-6 p-0 pr-2" *ngFor="let collection of otherCollections; let i = index;">
+                        <img class="w-100" [src]="collection.backgroundImage" (click)="gotoCollection(i + 1)">
+                        <p> {{ collection.name }} </p>
                     </div>
                 </div>
             </div>

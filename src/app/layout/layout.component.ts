@@ -1,7 +1,8 @@
-import { AfterViewChecked, AfterViewInit, ChangeDetectorRef, Component, OnInit } from '@angular/core';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { AfterViewInit, ChangeDetectorRef, Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
-import * as pages from '../../assets/data.json';
-import { SharedService } from '../core/services/shared.service';
+// import * as pages from '../../assets/json/data0.json';
 
 @Component({
   selector: 'app-layout',
@@ -9,20 +10,29 @@ import { SharedService } from '../core/services/shared.service';
   styleUrls: ['./layout.component.scss']
 })
 export class LayoutComponent implements OnInit, AfterViewInit {
-  pageIndex = 3;
+  pageIndex = 0;
   tempIndex: number;
   pages = Array();
   pageData: any;
   constructor(
     private cdr: ChangeDetectorRef,
-    private sharedService: SharedService
+    private http: HttpClient,
+    private activatedRoute: ActivatedRoute,
   ) { }
 
   ngOnInit(): void {
-    this.pages = pages['default'];
-    console.log('this.pages: ', this.pages);
-    this.getTempIndex();
-    console.log('temp index: ', this.tempIndex);
+    let id = 0;
+    id = this.activatedRoute.snapshot.params["id"];
+    this.http.get("assets/json/data" + id + ".json").subscribe(
+      (pages: any) => {
+        this.pages = pages;
+        console.log('this.pages: ', this.pages);
+        this.getTempIndex();
+        console.log('temp index: ', this.tempIndex);
+      }, (error: HttpErrorResponse) => {
+        console.error(error);
+      }
+    );
   }
 
   ngAfterViewInit(): void {
@@ -45,8 +55,13 @@ export class LayoutComponent implements OnInit, AfterViewInit {
     }
   }
 
+  setPageIndex(i) {
+    this.pageIndex = i;
+    this.getTempIndex();
+  }
+
   getTempIndex() {
-    this.tempIndex = Number(this.pages[this.pageIndex].tempIndex);
+    this.tempIndex = Number(this.pages[this.pageIndex]?.tempIndex);
     this.pageData = this.pages[this.pageIndex];
   }
 }

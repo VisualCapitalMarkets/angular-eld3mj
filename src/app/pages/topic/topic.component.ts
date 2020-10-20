@@ -1,4 +1,10 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { SafeHtml } from '@angular/platform-browser';
+
+export interface Content {
+  title: SafeHtml,
+  text: SafeHtml
+}
 
 @Component({
   selector: 'app-topic',
@@ -8,14 +14,15 @@ import { Component, Input, OnInit } from '@angular/core';
 export class TopicComponent implements OnInit {
   openStatus = 0;
   @Input() data;
+  content: Content;
 
   constructor() { }
 
   ngOnInit(): void {
+    this.content = this.data?.content;
   }
 
   changeStatus(status): void {
     this.openStatus = status;
   }
-
 }

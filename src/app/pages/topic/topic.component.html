@@ -13,18 +13,14 @@
         <div class="space"></div>
 
         <div *ngIf="openStatus == 0" class="card p-0 text-white">
-            <div class="m-4">
-                <h1>Lorem ipsum dolor</h1>
-                <h2>ipsum dolor</h2>
+            <div class="m-4" [innerHTML]="content.title">
+                <!-- <h1>Lorem ipsum dolor</h1>
+                <h2>ipsum dolor</h2> -->
             </div>
             <hr class="bg-white m-0">
             <div class="m-4">
-                <div class="description p-1">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                    labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-                    ut
-                    aliquip ex ea commodo consequat.
+                <div class="description p-1" [innerHTML]="content.text">
+                    <!-- Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. -->
                 </div>
             </div>
             <div class="cardFooter bg-white text-dark p-3 py-2 d-flex justify-content-center align-items-center">

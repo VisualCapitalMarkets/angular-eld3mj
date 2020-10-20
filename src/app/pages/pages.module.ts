@@ -20,9 +20,27 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ImpressumComponent } from './impressum/impressum.component';
 import { AdvertisingComponent } from './advertising/advertising.component';
 
-
 @NgModule({
-  declarations: [HomeComponent, FocusComponent, EditorialComponent, NewsComponent, ArticleComponent, TextMediaLeftComponent, TextMediaRightComponent, TopicComponent, InterviewComponent, SlidingTopComponent, SlidingRightComponent, KiosqueComponent, SplashScreenComponent, ChiffresComponent, PortfolioComponent, ImpressumComponent, AdvertisingComponent],
+  declarations: [
+    HomeComponent,
+    FocusComponent,
+    EditorialComponent,
+    NewsComponent,
+    ArticleComponent,
+    TextMediaLeftComponent,
+    TextMediaRightComponent,
+    TopicComponent,
+    InterviewComponent,
+    SlidingTopComponent,
+    SlidingRightComponent,
+    KiosqueComponent,
+    SplashScreenComponent,
+    ChiffresComponent,
+    PortfolioComponent,
+    ImpressumComponent,
+    AdvertisingComponent,
+    KiosqueComponent
+  ],
   imports: [
     CommonModule,
     PagesRoutingModule

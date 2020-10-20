@@ -8,28 +8,16 @@
                 <img class="logoImg" src="assets/images/logo.jpg">
             </div>
             <div class="row">
-                <div *ngFor="let cardItem of cardItems" class="col-xl-3 col-md-6 col-sm-12">
-                    <div class="card m-3">
+                <div *ngFor="let page of pages; let i = index;" class="col-xl-3 col-md-6 col-sm-12">
+                    <div class="card m-3" (click)="gotoPage(i)" data-toggle="collapse" data-target="#navbarToggleExternalContent">
                         <div class="row no-gutters">
                             <div class="col-3 bg-dark">
+                                <img *ngIf="page.coverImage" class="w-100 h-100" [src]="page.coverImage">
                             </div>
                             <div class="col-9">
                                 <div class="card-body p-2">
                                     <p class="card-text text-left text-dark">
-                                        {{ cardItem.text }}
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card m-3">
-                        <div class="row no-gutters">
-                            <div class="col-3 bg-warning">
-                            </div>
-                            <div class="col-9">
-                                <div class="card-body p-2">
-                                    <p class="card-text text-left text-dark">
-                                        {{ cardItem.text }}
+                                        {{ page.name }}
                                     </p>
                                 </div>
                             </div>
@@ -39,9 +27,9 @@
             </div>
         </div>
     </div>
-    <div class="collapse" id="navbarFooterIconToggle">
+    <!-- <div class="collapse" id="navbarFooterIconToggle">
         <p>test</p>
-    </div>
+    </div> -->
     <nav class="navbar navbar-light bg-light p-0">
         <div class="footerLogo d-flex justify-content-start">
             <img class="logoImg" src="assets/images/logo.jpg">

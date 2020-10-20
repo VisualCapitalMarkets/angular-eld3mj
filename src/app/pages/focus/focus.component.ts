@@ -22,8 +22,8 @@ export class FocusComponent implements OnInit {
   ngOnInit(): void {
     console.log('id: ', this.data);
     this.content = this.data?.content;
-    this.content.title = this._sanitizer.bypassSecurityTrustHtml(this.data?.content?.title);
-    this.content.text = this._sanitizer.bypassSecurityTrustHtml(this.data?.content?.text);
+    // this.content.title = this._sanitizer.bypassSecurityTrustHtml(this.data?.content?.title);
+    // this.content.text = this._sanitizer.bypassSecurityTrustHtml(this.data?.content?.text);
   }
 
 }

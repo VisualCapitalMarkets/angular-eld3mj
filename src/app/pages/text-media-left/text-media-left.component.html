@@ -1,124 +1,23 @@
 <div class="container-fluid d-flex">
     <div class="row">
         <div class="col-md-4 col-sm-12 p-0 mt-5 d-none d-md-block">
-            <div class="mt-4">
-                <img class="w-100" src="assets/images/photo_or_photo.png">
-                <img class="w-100" src="assets/images/interactive_map.png">
-                <img class="w-100" src="assets/images/static_ingographic.png">
-                <img class="w-100" src="assets/images/video_or_audio_podcast.png">
-                <img class="w-100" src="assets/images/interactive_chart.png">
-            </div>
+            <div class="mt-4" [innerHTML]="content.media"></div>
         </div>
+
         <div class="col-md-8 col-sm-12">
             <div class="contentMP my-5 w-75 mx-auto">
-                <div class="textRed font-weight-bold">
-                    LOREM IPSUM
-                </div>
+                <div class="font-weight-bold e2e-inner-html-bound" [innerHTML]="content.name"></div>
                 <div class="d-inline-block">
                     <hr class="m-1">
-                    <h2 class="title1">
-                        Lorem ipsum dolor sit amet
-                    </h2>
-                    <h3 class="title2">
-                        ipsum dolor sit amet elit
-                    </h3>
+                    <div [innerHTML]="content.title"></div>
                     <hr class="m-1">
                 </div>
-                <div class="my-3">
-                    <p class="font-weight-bold my-3">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                        labore
-                        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-                        ut
-                        aliquip ex ea commodo consequat.
-                    </p>
-                    <div class="my-3 text-justify">
-                        <h1 class="wrapText textRed font-weight-bold float-left m-0 mr-2">L</h1>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                        labore
-                        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-                        ut
-                        aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                        culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus
-                        error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab
-                        illo
-                        inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
-                        voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
-                        eos
-                        qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor
-                        sit
-                        amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et
-                        dolore magnam aliquam quaerat voluptatem.
-                    </div>
-                    <p class="my-3 text-justify">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                        labore
-                        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-                        ut
-                        aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                        culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus
-                        error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab
-                        illo
-                        inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
-                        voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
-                        eos
-                        qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor
-                        sit
-                        amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et
-                        dolore magnam aliquam quaerat voluptatem.
-                    </p>
-                    <h6 class="textRed font-weight-bold">
-                        Lorem ipsum dolor sit amet
-                    </h6>
-                    <p class="my-3 text-justify">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                        labore
-                        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-                        ut
-                        aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                        culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus
-                        error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab
-                        illo
-                        inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
-                        voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
-                        eos
-                        qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor
-                        sit
-                        amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et
-                        dolore magnam aliquam quaerat voluptatem.
-                    </p>
-                    <p class="my-3 text-justify">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                        labore
-                        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-                        ut
-                        aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                        culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus
-                        error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab
-                        illo
-                        inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
-                        voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
-                        eos
-                        qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor
-                        sit
-                        amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et
-                        dolore magnam aliquam quaerat voluptatem.
-                    </p>
-                </div>
+                <div class="my-3" [innerHTML]="content.text"></div>
             </div>
         </div>
+
         <div class="col-md-4 col-sm-12 p-0 mt-5 d-md-none d-sm-block">
-            <div class="mt-4">
-                <img class="w-100" src="assets/images/photo_or_photo.png">
-                <img class="w-100" src="assets/images/interactive_map.png">
-                <img class="w-100" src="assets/images/static_ingographic.png">
-                <img class="w-100" src="assets/images/video_or_audio_podcast.png">
-                <img class="w-100" src="assets/images/interactive_chart.png">
-            </div>
+            <div class="mt-4" [innerHTML]="content.media"></div>
         </div>
     </div>
 </div>

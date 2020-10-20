@@ -1,4 +1,11 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { SafeHtml } from '@angular/platform-browser';
+
+export interface Content {
+  title: SafeHtml,
+  text: SafeHtml,
+  image: string
+}
 
 @Component({
   selector: 'app-interview',
@@ -7,10 +14,12 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class InterviewComponent implements OnInit {
   @Input() data;
+  content: Content;
 
   constructor() { }
 
   ngOnInit(): void {
+    this.content = this.data?.content;
   }
 
 }

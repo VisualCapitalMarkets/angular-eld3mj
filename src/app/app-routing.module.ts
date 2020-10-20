@@ -8,6 +8,10 @@ import { SplashScreenComponent } from './pages/splash-screen/splash-screen.compo
 const routes: Routes = [
   {
     path: '',
+    component: KiosqueComponent
+  },
+  {
+    path: 'collection/:id',
     component: LayoutComponent,
     // children: [
     //   {
@@ -15,10 +19,6 @@ const routes: Routes = [
     //     loadChildren: () => import('./pages/pages.module').then(m => m.PagesModule)
     //   }
     // ]
-  },
-  {
-    path: 'kiosque',
-    component: KiosqueComponent
   },
   {
     path: 'splash-screen',

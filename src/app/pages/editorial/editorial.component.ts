@@ -23,10 +23,11 @@ export class EditorialComponent implements OnInit {
 
   ngOnInit(): void {
     this.content = this.data?.content;
-    this.content.name = this._sanitizer.bypassSecurityTrustHtml(this.data?.content?.name);
-    this.content.title = this._sanitizer.bypassSecurityTrustHtml(this.data?.content?.title);
-    this.content.text = this._sanitizer.bypassSecurityTrustHtml(this.data?.content?.text);
-    this.content.mediaText = this._sanitizer.bypassSecurityTrustHtml(this.data?.content?.mediaText);
+    // this.content.name = this._sanitizer.bypassSecurityTrustHtml(this.data?.content?.name);
+    // this.content.title = this._sanitizer.bypassSecurityTrustHtml(this.data?.content?.title);
+    // this.content.text = this._sanitizer.bypassSecurityTrustHtml(this.data?.content?.text);
+    // this.content.mediaText = this._sanitizer.bypassSecurityTrustHtml(this.data?.content?.mediaText);
+
     // document.querySelector('.name').innerHTML = this.content?.name;
     // document.querySelector('.title').innerHTML = this.content?.title;
     // document.querySelector('.description').innerHTML = this.content?.text;

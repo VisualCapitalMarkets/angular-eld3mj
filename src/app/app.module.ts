@@ -23,11 +23,16 @@ import { ChiffresComponent } from './pages/chiffres/chiffres.component';
 import { PortfolioComponent } from './pages/portfolio/portfolio.component';
 import { ImpressumComponent } from './pages/impressum/impressum.component';
 import { AdvertisingComponent } from './pages/advertising/advertising.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { CommonModule } from '@angular/common';
+import { KiosqueComponent } from './pages/kiosque/kiosque.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LayoutComponent,
+    KiosqueComponent,
     HomeComponent,
     FocusComponent,
     EditorialComponent,
@@ -45,7 +50,10 @@ import { AdvertisingComponent } from './pages/advertising/advertising.component'
     AdvertisingComponent
   ],
   imports: [
+    CommonModule,
     BrowserModule,
+    FormsModule,
+    HttpClientModule,
     CoreModule,
     FooterModule,
     MaterialModule,

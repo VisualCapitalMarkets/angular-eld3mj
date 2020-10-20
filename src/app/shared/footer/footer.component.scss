@@ -5,18 +5,20 @@
     width: 100%;
     color: white;
     text-align: center;
-    z-index: 1000;
-
+    z-index: 9999;
+    .collapse {
+        .card {
+            cursor: pointer;
+        }
+    }
     button {
         border: 0;
         cursor: pointer;
-
         svg {
             font-size: 34px;
             display: flex;
             align-self: center;
         }
-
         .rotate90 {
             -webkit-transform: rotate(90deg);
             -moz-transform: rotate(90deg);
@@ -24,7 +26,6 @@
             -ms-transform: rotate(90deg);
             transform: rotate(90deg);
         }
-
         .rotate360 {
             -webkit-transform: rotate(360deg);
             -moz-transform: rotate(360deg);
@@ -34,78 +35,53 @@
             margin-right: 10px;
         }
     }
-
     .bg-light {
-        background-color: #fff !important; 
-      }
-
-    .bg-light.p-4  {
+        background-color: #fff !important;
+    }
+    .bg-light.p-4 {
         border-top: 0.5px solid lightgrey;
     }
     .navbar {
         border-top: 1px solid lightgrey;
         height: 60px;
-
-    // .navbar {
-    //     border-top: 1px solid darkgray;
-    //     height: 80px;
-
+        // .navbar {
+        //     border-top: 1px solid darkgray;
+        //     height: 80px;
         .footerLogo {
             margin-left: 16px;
         }
-
         .logoImg {
             height: 40px;
         }
-    
         // ajout Frederic
-        .navbar-toggler.p-1 {      
+        .navbar-toggler.p-1 {
             display: inline-block;
             width: 4.00em;
         }
-
         .navbar-toggler.p-1 :hover {
             transform: scale(1.3);
             opacity: 0.6;
         }
-
         .navbar-toggler.p-1.center :hover {
             transform: scale(1.15);
             opacity: 0.6;
         }
-         // fin ajout Frederic
-
-        // .footer-center {
-        //     width: 100%;
-        //     position: absolute;
-        //     height: 80px;
-    
-        //     button {
-        //         border-left: 1px solid;
-        //         border-radius: 0;
-        //         border-right: 1px solid;
-        //     }
-        // }
-
         .footer-center {
             width: 100%;
             position: absolute;
             height: 60px;
-    
             button {
                 border-left: 0.5px solid lightgrey;
                 border-radius: 0;
                 border-right: 0.5px solid lightgrey;
             }
         }
-
         .right {
             .customDromUpButton {
                 padding: 0;
                 background-color: transparent;
                 border-radius: 2px;
             }
-            
             .mobileIcon {
                 .dropdown-menu {
                     border: 0;
@@ -113,7 +89,6 @@
                     // border-bottom: 1px solid darkgray;
                     border-bottom: 0.5px solid lightgrey;
                     width: calc(50vw + 64px);
-
                     .dropdown-menu {
                         width: min-content;
                     }
@@ -141,30 +116,24 @@
         .collapse {
             max-height: 95vh;
             overflow: auto;
-
             .card-body {
                 padding: 0.5rem;
-
                 .card-text {
                     font-size: .8em;
                 }
             }
         }
-
         .navbar {
-
             .footerLogo {
                 .logoImg {
                     display: none !important;
                 }
             }
-        
             .right {
                 .webIcon {
                     display: none !important;
                 }
             }
-
             .footer-center {
                 height: 58px;
             }
@@ -176,7 +145,6 @@
     .mobileIcon {
         display: none;
     }
-
     .mobileNavHeader {
         display: none !important;
     }

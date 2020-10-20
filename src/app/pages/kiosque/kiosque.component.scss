@@ -1,11 +1,17 @@
 .container-fluid {
     height: 100vh;
+    img.logo {
+        max-width: 100%;
+    }
+    .title {
+        font-size: 36px;
+        font-weight: bold;
+    }
 }
 
 .socialLinkGroup {
-    position: absolute;
-    bottom: 96px;
-
+    // position: absolute;
+    // bottom: 96px;
     .copyright {
         font-size: .67em;
     }
@@ -15,15 +21,12 @@
     .container-fluid {
         padding-left: 24px !important;
         padding-right: 24px !important;
-
         .logoFluid {
             width: 100%;
         }
-    
         .description {
             width: 100% !important;
         }
-
         .socialLinkGroup {
             position: inherit;
             width: 100% !important;

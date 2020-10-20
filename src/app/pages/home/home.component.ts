@@ -26,7 +26,7 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     console.log('data: ', this.data);
     this.content = this.data?.content;
-    this.content.text = this._sanitizer.bypassSecurityTrustHtml(String(this.content.text));
+    // this.content.text = this._sanitizer.bypassSecurityTrustHtml(String(this.content.text));
   }
 
   stringToHTML(str) {

@@ -13,8 +13,8 @@
             <div class="col-md-3 col-sm-12">
             </div>
             <div class="col-md-3 col-sm-12">
-                <div class="text-white">
-                    <h5>EDITORIAL</h5>
+                <div class="text-white" [innerHTML]="content">
+                    <!-- <h5>EDITORIAL</h5>
                     <p class="m-0">Function</p>
                     <p>First name + Name</p>
                     <p class="m-0">Function</p>
@@ -34,11 +34,11 @@
                     <p>Email</p>
                     <br>
                     <br>
-                    <p>@2020-Publisher</p>
+                    <p>@2020-Publisher</p> -->
                 </div>
             </div>
             <div class="col-md-6 col-sm-12 mb-5">
-                <img class="w-100" src="assets/logos/logoBF.png">
+                <img class="w-100" [src]="logo">
             </div>
         </div>
     </div>
