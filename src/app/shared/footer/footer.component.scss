@@ -44,11 +44,14 @@
     .navbar {
         border-top: 1px solid lightgrey;
         height: 60px;
-        // .navbar {
-        //     border-top: 1px solid darkgray;
-        //     height: 80px;
         .footerLogo {
             margin-left: 16px;
+            .logo {
+                color: black;
+                font-size: 36px;
+                font-weight: bold;
+                font-family: cursive;
+            }
         }
         .logoImg {
             height: 40px;

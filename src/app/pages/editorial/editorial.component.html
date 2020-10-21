@@ -5,7 +5,7 @@
                 <div class="tab text-center py-1 px-5">Éditorial</div>
                 <div class="redLine"></div>
                 <div class="author text-center mt-5">
-                    <img src="assets/images/author.png" class="avatar avatar-64 img-circle">
+                    <img [src]="content.authorImg" class="avatar avatar-64 img-circle">
                     <div class="name" [innerHTML]="content.name"></div>
                 </div>
                 <div class="title text-left mt-3" [innerHTML]="content.title">
@@ -18,12 +18,12 @@
             <div class="rightPanel">
                 <div class="row m-0">
                     <div class="col-12 p-0 text">
-                        <img src="assets/images/Pictop.png">
+                        <img [src]="picTop">
                     </div>
                 </div>
                 <div class="row m-0">
                     <div class="col-6 p-0">
-                        <img src="assets/images/sommaire2.png">
+                        <img [src]="picBottom">
                     </div>
                     <div class="col-6 px-3 textArea" [innerHTML]="content.mediaText"></div>
                 </div>

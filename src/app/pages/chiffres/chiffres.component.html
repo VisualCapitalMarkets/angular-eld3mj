@@ -1,10 +1,10 @@
 <div class="container-fluid d-flex p-0">
     <div class="background">
-        <img src="assets/bgImgs/chiffresBg.png">
+        <img [src]="backgroundImage" class="w-100">
     </div>
     <div class="content text-white h-100 w-100">
         <div class="tab d-inline-block">
-            <p class="m-0 p-2 px-3 text-white">Strategie</p>
+            <p class="m-0 p-2 px-3 text-white"> Strategie </p>
             <div class="d-flex w-100">
                 <div class="borderBottomRed"></div>
                 <div class="borderBottomWhite"></div>
@@ -12,14 +12,8 @@
         </div>
         <div class="titleBox row m-0">
             <div class="title col-12 p-0 bgGray" [innerHTML]="content.title">
-                <!-- <p class="float-left bgGray px-2 m-0">
-                    Lorem ipsum dolor
-                </p> -->
             </div>
             <div class="title2 col-12 p-0 bgGray" [innerHTML]="content.subTitle">
-                <!-- <p class="float-left bgGray px-2 m-0">
-                    ipsum dolor
-                </p> -->
             </div>
         </div>
         <div class="">

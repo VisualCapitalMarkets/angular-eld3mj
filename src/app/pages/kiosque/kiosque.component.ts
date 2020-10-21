@@ -28,7 +28,7 @@ export class KiosqueComponent implements OnInit {
       }, (error: HttpErrorResponse) => {
         console.error(error);
       }
-    );;
+    );
   }
 
   ngOnInit(): void {

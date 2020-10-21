@@ -14,11 +14,13 @@ export interface Content {
 export class TopicComponent implements OnInit {
   openStatus = 0;
   @Input() data;
+  backgroundImage: string;
   content: Content;
 
   constructor() { }
 
   ngOnInit(): void {
+    this.backgroundImage = this.data?.backgroundImage;
     this.content = this.data?.content;
   }
 

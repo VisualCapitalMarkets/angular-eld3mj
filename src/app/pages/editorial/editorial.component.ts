@@ -1,7 +1,9 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
+import { environment } from 'src/environments/environment';
 
 export interface Content {
+  authorImg: string,
   name: SafeHtml,
   title: SafeHtml,
   text: SafeHtml,
@@ -15,6 +17,8 @@ export interface Content {
 })
 export class EditorialComponent implements OnInit {
   @Input() data;
+  picTop: string;
+  picBottom: string;
   content: Content;
 
   constructor(
@@ -22,6 +26,8 @@ export class EditorialComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    this.picTop = environment.host + '/tempImages/templates/Pictop.png';
+    this.picBottom = environment.host + '/tempImages/templates/sommaire2.png';
     this.content = this.data?.content;
     // this.content.name = this._sanitizer.bypassSecurityTrustHtml(this.data?.content?.name);
     // this.content.title = this._sanitizer.bypassSecurityTrustHtml(this.data?.content?.title);

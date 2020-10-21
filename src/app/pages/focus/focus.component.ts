@@ -13,6 +13,7 @@ export interface Content {
 })
 export class FocusComponent implements OnInit {
   @Input() data: any;
+  backgroundImage: string;
   content: Content;
 
   constructor(
@@ -21,6 +22,7 @@ export class FocusComponent implements OnInit {
 
   ngOnInit(): void {
     console.log('id: ', this.data);
+    this.backgroundImage = this.data?.backgroundImage;
     this.content = this.data?.content;
     // this.content.title = this._sanitizer.bypassSecurityTrustHtml(this.data?.content?.title);
     // this.content.text = this._sanitizer.bypassSecurityTrustHtml(this.data?.content?.text);

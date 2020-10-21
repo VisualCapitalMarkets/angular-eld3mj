@@ -13,11 +13,13 @@ export interface Content {
 })
 export class ChiffresComponent implements OnInit {
   @Input() data;
+  backgroundImage: string;
   content: Content;
 
   constructor() { }
 
   ngOnInit(): void {
+    this.backgroundImage = this.data?.backgroundImage;
     this.content = this.data?.content;
   }
 

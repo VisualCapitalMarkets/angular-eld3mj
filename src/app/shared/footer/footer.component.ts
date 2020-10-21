@@ -1,5 +1,7 @@
-import { Component, OnInit, ViewChild, ElementRef, Output, EventEmitter, Input } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, Output, EventEmitter, Input, ChangeDetectorRef } from '@angular/core';
 import { OverlayModule } from '@angular/cdk/overlay';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-footer',
@@ -9,6 +11,7 @@ import { OverlayModule } from '@angular/cdk/overlay';
 
 export class FooterComponent implements OnInit {
   @Input() pages: any;
+  title: string;
   cardItems = [
     { text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, send do eiusmod em siemprensi' },
     { text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, send do eiusmod em siemprensi' },
@@ -19,14 +22,25 @@ export class FooterComponent implements OnInit {
   @Output() onNextIndex: EventEmitter<any> = new EventEmitter()
   @Output() onPrevIndex: EventEmitter<any> = new EventEmitter()
   @Output() onSetPageIndex: EventEmitter<any> = new EventEmitter()
-
+  kiosqueImage: string;
   // @ViewChild('tref') tref: ElementRef;
 
-  constructor() { }
+  constructor(
+    private http: HttpClient,
+    private cdr: ChangeDetectorRef
+  ) { }
 
   ngOnInit(): void {
     console.log('pages: ', this.pages);
-
+    this.kiosqueImage = environment.host + '/tempImages/kiosque.png'
+    this.http.get("assets/json/info.json").subscribe(
+      (info: any) => {
+        this.title = info.title;
+        console.log('title: ', this.title);
+      }, (error: HttpErrorResponse) => {
+        console.error(error);
+      }
+    );
   }
 
   ngAfterViewInit(): void {

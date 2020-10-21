@@ -17,6 +17,7 @@ export interface Content {
 
 export class HomeComponent implements OnInit {
   @Input() data;
+  backgroundImage: string;
   content: Content;
 
   constructor(
@@ -25,6 +26,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     console.log('data: ', this.data);
+    this.backgroundImage = this.data?.backgroundImage;
     this.content = this.data?.content;
     // this.content.text = this._sanitizer.bypassSecurityTrustHtml(String(this.content.text));
   }
