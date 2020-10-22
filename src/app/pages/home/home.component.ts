@@ -1,9 +1,9 @@
-import { Component, ElementRef, Input, OnInit, ViewEncapsulation } from '@angular/core';
-import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
+import { AfterViewInit, Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser';
 
 export interface Content {
-  title: SafeHtml,
-  text: SafeHtml,
+  title: string,
+  text: string,
   buttonText: string,
   buttonBgColor: string
 }
@@ -15,7 +15,7 @@ export interface Content {
   encapsulation: ViewEncapsulation.None,
 })
 
-export class HomeComponent implements OnInit {
+export class HomeComponent implements OnInit, AfterViewInit {
   @Input() data;
   backgroundImage: string;
   content: Content;
@@ -28,6 +28,10 @@ export class HomeComponent implements OnInit {
     console.log('data: ', this.data);
     this.backgroundImage = this.data?.backgroundImage;
     this.content = this.data?.content;
+  }
+
+  ngAfterViewInit(): void {
+    document.querySelector('.text').innerHTML = this.content.text;
     // this.content.text = this._sanitizer.bypassSecurityTrustHtml(String(this.content.text));
   }
 

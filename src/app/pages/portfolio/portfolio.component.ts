@@ -1,9 +1,9 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, Input, OnInit, QueryList, ViewChildren } from '@angular/core';
 import { SafeHtml } from '@angular/platform-browser';
 
 export interface Content {
-  title: SafeHtml,
-  description: SafeHtml,
+  title: string,
+  description: string,
   backgroundImage: string
 }
 
@@ -12,9 +12,11 @@ export interface Content {
   templateUrl: './portfolio.component.html',
   styleUrls: ['./portfolio.component.scss']
 })
-export class PortfolioComponent implements OnInit {
+export class PortfolioComponent implements OnInit, AfterViewInit {
   @Input() data;
   contents: Content[];
+
+  @ViewChildren('carouselEl') carouselEl: QueryList<ElementRef>;
 
   constructor() { }
 
@@ -22,4 +24,11 @@ export class PortfolioComponent implements OnInit {
     this.contents = this.data?.content;
   }
 
+  ngAfterViewInit(): void {
+    console.log('carouselEl: ', this.carouselEl);
+    this.contents?.map((content, index) => {
+      this.carouselEl.toArray()[index].nativeElement.querySelector('.title').innerHTML = content.title;
+      this.carouselEl.toArray()[index].nativeElement.querySelector('.description').innerHTML = content.description;
+    });
+  }
 }

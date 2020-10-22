@@ -1,9 +1,8 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { SafeHtml } from '@angular/platform-browser';
+import { AfterViewInit, Component, Input, OnInit } from '@angular/core';
 
 export interface Content {
-  title: SafeHtml,
-  text: SafeHtml
+  title: string,
+  text: string
 }
 
 @Component({
@@ -11,7 +10,7 @@ export interface Content {
   templateUrl: './topic.component.html',
   styleUrls: ['./topic.component.scss']
 })
-export class TopicComponent implements OnInit {
+export class TopicComponent implements OnInit, AfterViewInit {
   openStatus = 0;
   @Input() data;
   backgroundImage: string;
@@ -22,6 +21,11 @@ export class TopicComponent implements OnInit {
   ngOnInit(): void {
     this.backgroundImage = this.data?.backgroundImage;
     this.content = this.data?.content;
+  }
+
+  ngAfterViewInit(): void {
+    document.querySelector('.title').innerHTML = this.content.title;
+    document.querySelector('.description').innerHTML = this.content.text;
   }
 
   changeStatus(status): void {

@@ -6,11 +6,11 @@
                 <li data-target="#myCarosel" data-slide-to="1"></li>
                 <li data-target="#myCarosel" data-slide-to="2"></li>
             </ul>
-            <div class="carousel-item" *ngFor="let content of contents; let i = index;" data-interval="5000" [ngClass]="{ 'active': i === 0 }">
+            <div class="carousel-item" *ngFor="let content of contents; let i = index;" data-interval="5000" [ngClass]="{ 'active': i === 0 }" #carouselEl>
                 <img [src]="content.backgroundImage" class="w-100">
                 <div class="carousel-caption d-none d-block text-left">
-                    <div [innerHTML]="content.title"></div>
-                    <div [innerHTML]="content.description"></div>
+                    <div class="title"></div>
+                    <div class="description"></div>
                 </div>
             </div>
         </div>

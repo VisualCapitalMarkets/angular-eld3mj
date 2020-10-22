@@ -1,15 +1,14 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { SafeHtml } from '@angular/platform-browser';
+import { AfterViewInit, Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-impressum',
   templateUrl: './impressum.component.html',
   styleUrls: ['./impressum.component.scss']
 })
-export class ImpressumComponent implements OnInit {
+export class ImpressumComponent implements OnInit, AfterViewInit {
   @Input() data;
   logo: string;
-  content: SafeHtml;
+  content: string;
 
   constructor() { }
 
@@ -18,4 +17,7 @@ export class ImpressumComponent implements OnInit {
     this.content = this.data?.content;
   }
 
+  ngAfterViewInit(): void {
+    document.querySelector('.contentText').innerHTML = this.content;
+  }
 }

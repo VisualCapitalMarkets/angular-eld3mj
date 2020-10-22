@@ -9,10 +9,10 @@
                     <div class="hr"></div>
                     <div class="mt-5 pt-3">
                         <hr class="m-1">
-                        <div [innerHTML]="content.title"></div>
+                        <div class="title"></div>
                         <hr class="m-1">
                     </div>
-                    <div class="my-3" [innerHTML]="content.text">
+                    <div class="text my-3">
                     </div>
                 </div>
             </div>
@@ -23,11 +23,11 @@
             </button>
         </div>
 
-        <div *ngIf="rightPanelSlideNumber == 0" class="col-md-6 col-sm-12 p-0 w-100 maxHeight" [innerHTML]="content.media">
+        <div *ngIf="rightPanelSlideNumber == 0" class="media col-md-6 col-sm-12 p-0 w-100 maxHeight">
         </div>
 
         <div *ngIf="rightPanelSlideNumber == 1" class="col-md-6 col-sm-12 p-5 bgOrange w-100 maxHeight">
-            <div class="m-md-3 mx-md-5 m-sm-0" [innerHTML]="content.rightText">
+            <div class="rightText m-md-3 mx-md-5 m-sm-0">
             </div>
         </div>
     </div>

@@ -2,8 +2,8 @@ import { AfterViewInit, Component, ElementRef, Input, OnInit, QueryList, ViewChi
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 
 export interface Content {
-  title: SafeHtml,
-  text: SafeHtml,
+  title: string,
+  text: string,
   image: string,
   imageIndex: number
 }
@@ -25,14 +25,6 @@ export class NewsComponent implements OnInit, AfterViewInit {
   ngOnInit(): void {
     this.content = this.data?.content;
     console.log('content: ', this.content);
-    // this.content = this.content.map(article => {
-    //   return {
-    //     title: this._sanitizer.bypassSecurityTrustHtml(String(article.title)),
-    //     text: this._sanitizer.bypassSecurityTrustHtml(String(article.text)),
-    //     image: article.image,
-    //     imageIndex: article.imageIndex
-    //   }
-    // });
   }
 
   ngAfterViewInit(): void {
@@ -41,6 +33,8 @@ export class NewsComponent implements OnInit, AfterViewInit {
       if (article.imageIndex > 0) {
         this.setImagePosition(image, article.imageIndex);
       }
+      this.articlesElement.toArray()[index].nativeElement.querySelector('.title').innerHTML = article.title;
+      this.articlesElement.toArray()[index].nativeElement.querySelector('.description').innerHTML = article.text;
     });
   }
 

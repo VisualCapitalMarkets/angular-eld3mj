@@ -1,9 +1,9 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { AfterViewInit, Component, Input, OnInit } from '@angular/core';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 
 export interface Content {
-  title: SafeHtml,
-  text: SafeHtml
+  title: string,
+  text: string
 }
 
 @Component({
@@ -11,7 +11,7 @@ export interface Content {
   templateUrl: './focus.component.html',
   styleUrls: ['./focus.component.scss']
 })
-export class FocusComponent implements OnInit {
+export class FocusComponent implements OnInit, AfterViewInit {
   @Input() data: any;
   backgroundImage: string;
   content: Content;
@@ -24,8 +24,10 @@ export class FocusComponent implements OnInit {
     console.log('id: ', this.data);
     this.backgroundImage = this.data?.backgroundImage;
     this.content = this.data?.content;
-    // this.content.title = this._sanitizer.bypassSecurityTrustHtml(this.data?.content?.title);
-    // this.content.text = this._sanitizer.bypassSecurityTrustHtml(this.data?.content?.text);
   }
 
+  ngAfterViewInit(): void {
+    document.querySelector('.title').innerHTML = this.content.title;
+    document.querySelector('.scrollText').innerHTML = this.content.text;
+  }
 }

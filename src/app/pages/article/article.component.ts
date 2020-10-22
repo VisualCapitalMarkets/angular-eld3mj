@@ -1,10 +1,10 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { AfterViewInit, Component, Input, OnInit } from '@angular/core';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 
 export interface Content {
-  name: SafeHtml,
-  title: SafeHtml,
-  text: SafeHtml
+  name: string,
+  title: string,
+  text: string
 }
 
 @Component({
@@ -12,7 +12,7 @@ export interface Content {
   templateUrl: './article.component.html',
   styleUrls: ['./article.component.scss']
 })
-export class ArticleComponent implements OnInit {
+export class ArticleComponent implements OnInit, AfterViewInit {
   @Input() data;
   content: Content;
 
@@ -22,9 +22,12 @@ export class ArticleComponent implements OnInit {
 
   ngOnInit(): void {
     this.content = this.data?.content;
-    // this.content.name = this._sanitizer.bypassSecurityTrustHtml(this.data?.content?.name);
-    // this.content.title = this._sanitizer.bypassSecurityTrustHtml(this.data?.content?.title);
-    // this.content.text = this._sanitizer.bypassSecurityTrustHtml(this.data?.content?.text);
+    console.log('content: ', this.content);
   }
 
+  ngAfterViewInit(): void {
+    document.querySelector('.name').innerHTML = this.content.name;
+    document.querySelector('.title').innerHTML = this.content.title;
+    document.querySelector('.text').innerHTML = this.content.text;
+  }
 }

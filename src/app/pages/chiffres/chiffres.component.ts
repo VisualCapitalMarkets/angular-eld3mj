@@ -1,9 +1,9 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { AfterViewInit, Component, Input, OnInit } from '@angular/core';
 import { SafeHtml } from '@angular/platform-browser';
 
 export interface Content {
-  title: SafeHtml,
-  subTitle: SafeHtml
+  title: string,
+  subTitle: string
 }
 
 @Component({
@@ -11,7 +11,7 @@ export interface Content {
   templateUrl: './chiffres.component.html',
   styleUrls: ['./chiffres.component.scss']
 })
-export class ChiffresComponent implements OnInit {
+export class ChiffresComponent implements OnInit, AfterViewInit {
   @Input() data;
   backgroundImage: string;
   content: Content;
@@ -23,4 +23,8 @@ export class ChiffresComponent implements OnInit {
     this.content = this.data?.content;
   }
 
+  ngAfterViewInit(): void {
+    document.querySelector('.title').innerHTML = this.content.title;
+    document.querySelector('.title2').innerHTML = this.content.subTitle;
+  }
 }

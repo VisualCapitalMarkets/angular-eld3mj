@@ -1,23 +1,23 @@
 <div class="container-fluid d-flex">
-    <div class="row">
+    <div class="row footerMargin">
         <div class="col-md-8 col-sm-12">
             <div class="contentMP my-5 w-75 mx-auto">
                 <div class="textRed font-weight-bold">
                     LOREM IPSUM
                 </div>
-                <div class="textRed font-weight-bold" [innerHTML]="content.name"></div>
+                <div class="name font-weight-bold"></div>
 
                 <div class="d-inline-block">
                     <hr class="m-1">
-                    <div [innerHTML]="content.title"></div>
+                    <div class="title"></div>
                     <hr class="m-1">
                 </div>
-                <div class="my-3" [innerHTML]="content.text"></div>
+                <div class="text my-3"></div>
             </div>
         </div>
 
         <div class="col-md-4 col-sm-12 p-0 mt-5">
-            <div class="mt-4" [innerHTML]="content.media"></div>
+            <div class="media d-block mt-4"></div>
         </div>
     </div>
 </div>

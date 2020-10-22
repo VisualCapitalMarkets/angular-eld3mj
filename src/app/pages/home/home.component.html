@@ -2,8 +2,8 @@
     <div class="background">
         <img [src]="backgroundImage" class="w-100">
     </div>
-    <div class="text">
-        <div [innerHTML]="content?.text" class="my-4"></div>
+    <div class="textContent">
+        <div class="text my-4"></div>
         <button [ngStyle]="{ 'background-color': content?.buttonBgColor}"> {{ content?.buttonText }} </button>
     </div>
 </div>
