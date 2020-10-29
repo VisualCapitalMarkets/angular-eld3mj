@@ -5,7 +5,8 @@
             <br>
             <div class="title"> {{ info?.title }} </div>
             <div class="description w-50">
-                <div [innerHTML]="info?.description"></div>
+                <div class="my-3" [innerHTML]="info?.description"></div>
+                <div class="my-3" [innerHTML]="info?.publisher"></div>
                 <div class="socialLinkGroup d-flex align-items-center mt-5">
                     <div class="row w-100 m-0">
                         <a [href]="info?.facebook" class="col pl-0">

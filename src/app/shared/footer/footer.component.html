@@ -10,14 +10,17 @@
             <div class="row">
                 <div *ngFor="let page of pages; let i = index;" class="col-xl-3 col-md-6 col-sm-12">
                     <div class="card m-3" (click)="gotoPage(i)" data-toggle="collapse" data-target="#navbarToggleExternalContent">
-                        <div class="row no-gutters">
-                            <div class="col-3 bg-dark">
-                                <img *ngIf="page.coverImage" class="w-100 h-100" [src]="page.coverImage">
+                        <div data-toggle="tooltip" data-placement="top" [title]="page.description" class="row no-gutters">
+                            <div class="col-4 bg-white d-flex align-items-center">
+                                <img *ngIf="page.coverImage" class="w-100" [src]="page.coverImage">
                             </div>
-                            <div class="col-9">
+                            <div class="col-8">
                                 <div class="card-body p-2">
-                                    <p class="card-text text-left text-dark">
+                                    <h5 class="m-0 card-text text-left text-dark text-truncate">
                                         {{ page.name }}
+                                    </h5>
+                                    <p class="m-0 card-text text-left text-dark text-truncate">
+                                        {{ page.description }}
                                     </p>
                                 </div>
                             </div>

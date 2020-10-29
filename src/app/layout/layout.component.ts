@@ -10,7 +10,7 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./layout.component.scss']
 })
 export class LayoutComponent implements OnInit, AfterViewInit {
-  pageIndex = 13;
+  pageIndex = 0;
   tempIndex: number;
   pages = Array();
   pageData: any;
