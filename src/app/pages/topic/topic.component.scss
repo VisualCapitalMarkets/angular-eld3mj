@@ -29,13 +29,16 @@
         }
     }
     .space {
-        height: 25vh;
+        height: 12vh;
     }
     .card {
         max-width: 26em;
         // min-height: 24em;
         height: 40%;
         background-color: #666666;
+        .subpages {
+            cursor: pointer;
+        }
         .cardFooter {
             // position: absolute;
             // bottom: 0;

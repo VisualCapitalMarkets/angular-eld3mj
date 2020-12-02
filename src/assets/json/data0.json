@@ -82,14 +82,26 @@
         "coverImage": "http://127.0.0.1:3000/tempImages/tempImage/temp6.png"
     },
     {
-        "name": "topic",
-        "description": "Lorem ipsum dolor sit amet",
         "backgroundImage": "http://127.0.0.1:3000/tempImages/templates/reperes.png",
         "content": {
             "title": "<h1>Lorem ipsum dolor</h1><h2>ipsum dolor</h2>",
             "text": "<p><span style=\"background-color:rgb(102,102,102);color:rgb(153,153,153);\">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span></p>"
         },
+        "name": "topic",
         "tempIndex": "7",
+        "topicSubPages": [{
+                "name": "text-media-left",
+                "tempIndex": "5",
+                "text": "<p>subpage 1</p>",
+                "index": 5
+            },
+            {
+                "name": "text-media-right",
+                "tempIndex": "6",
+                "text": "<p>subpage 1</p>",
+                "index": 6
+            }
+        ],
         "coverImage": "http://127.0.0.1:3000/tempImages/tempImage/temp7.png"
     },
     {

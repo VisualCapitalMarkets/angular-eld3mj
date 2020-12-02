@@ -4,7 +4,7 @@
     </div>
     <div class="content m-md-5 p-md-3 px-md-5">
         <div class="tab d-inline-block">
-            <p class="m-0 p-2 px-3 text-white">Reperes</p>
+            <p class="m-0 p-2 px-3 text-white"> Reperes </p>
             <div class="d-flex w-100">
                 <div class="borderBottomRed"></div>
                 <div class="borderBottomWhite"></div>
@@ -29,20 +29,15 @@
         <div *ngIf="openStatus == 1" class="card p-0 text-white">
             <div class="mx-4 mt-4">
                 <h2>Dans ce dossier...</h2>
-                <div class="m-4">
-                    <hr class="bg-white">
-                    <p>Title of the first sub-page article with link...</p>
-                    <hr class="bg-white">
-                    <p>Title of the second sub-page article with link...</p>
-                    <hr class="bg-white">
-                    <p>Title of the third sub-page article with link...</p>
-                    <hr class="bg-white">
-                    <p>Title of the fourth sub-page article with link...</p>
-                    <hr class="bg-white">
+                <div class="m-0 mt-3">
+                    <div *ngFor="let subpage of subPages" class="subpages">
+                        <hr class="bg-white m-0">
+                        <div class="my-2" (click)="goSubPage(subpage.index)" [innerHTML]="subpage.text"> </div>
+                    </div>
                 </div>
             </div>
             <div class="cardFooter text-dark p-3 pb-4 d-flex justify-content-center align-items-center">
-                <button class="plus p-0 border-0 text-white" (click)="changeStatus(0)">x</button>
+                <button class="plus p-0 border-0 text-white" (click)="changeStatus(0)"> x </button>
             </div>
         </div>
     </div>

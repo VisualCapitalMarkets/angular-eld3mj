@@ -8,7 +8,7 @@
             <app-article *ngIf="tempIndex === 4" [data]="pageData"></app-article>
             <app-text-media-left *ngIf="tempIndex === 5" [data]="pageData"></app-text-media-left>
             <app-text-media-right *ngIf="tempIndex === 6" [data]="pageData"></app-text-media-right>
-            <app-topic *ngIf="tempIndex === 7" [data]="pageData"></app-topic>
+            <app-topic *ngIf="tempIndex === 7" [data]="pageData" (onSetPageIndex)="setPageIndex($event)"></app-topic>
             <app-interview *ngIf="tempIndex === 8" [data]="pageData"></app-interview>
             <app-sliding-top *ngIf="tempIndex === 9" [data]="pageData"></app-sliding-top>
             <app-sliding-right *ngIf="tempIndex === 10" [data]="pageData"></app-sliding-right>
