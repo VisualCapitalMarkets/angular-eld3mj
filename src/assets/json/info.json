@@ -1,1 +1,19 @@
-{"title":"banque-finance.ch ","baseline":"wfwefwe","description":"wfewwfe","publisher":"gPsfefwefwfwefwe","facebook":"https://sfef.com","linkedin":"https://sfef.com","twitter":"https://sfef.com","youtube":"https://sfef.com","instagram":"https://sfef.com","logo":"http://127.0.0.1:3000/images/5f648b457a28876e141bd046/img_1602581114826.png","userId":"5f648b457a28876e141bd046","collections":[{"backgroundImage":"http://127.0.0.1:3000/tempImages/tempImage/temp0.png","name":"October 29 2020"},{"backgroundImage":"http://127.0.0.1:3000/tempImages/tempImage/temp0.png","name":"October 18 2020"}]}
+{
+    "title": "SwissFinance.Tech",
+    "baseline": " Information Technologies for the Swiss Finance Industry",
+    "description": "SwissFinance.Tech is the first 100% digital magazine published in French-speaking part of Switzerland entirely devoted to the latest news on fintechs and information technologies applied to the industry of finance.",
+    "publisher": "SwissFinance.Tech is published by Visual Capital Markets SA, a Swiss fintech company specializing in the analysis and distribution of data and financial information through innovative tools. At the crossroads of financial media and new technologies, the editorial team is based in Geneva.",
+    "facebook": "",
+    "linkedin": "https://www.linkedin.com/company/65298584/",
+    "twitter": "",
+    "youtube": "",
+    "instagram": "",
+    "logo": "http://admin.d-mag.pro:3000/images/5f7c577fffdd2d63fbc71a2c/img_1607097849375.png",
+    "userId": "5f7c577fffdd2d63fbc71a2c",
+    "collections": [
+        {
+            "backgroundImage": "http://127.0.0.1:3000/images/5f7c577fffdd2d63fbc71a2c/img_1612464735555.png",
+            "name": "SwissFinance.Tech #2 - March 2021"
+        }
+    ]
+}

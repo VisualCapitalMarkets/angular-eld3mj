@@ -23,12 +23,13 @@ export class LayoutComponent implements OnInit, AfterViewInit {
   ngOnInit(): void {
     let id = 0;
     id = this.activatedRoute.snapshot.params["id"];
+    console.log('id ===> ', id);
+    
     this.http.get("assets/json/data" + id + ".json").subscribe(
       (pages: any) => {
         this.pages = pages;
         console.log('this.pages: ', this.pages);
         this.getTempIndex();
-        console.log('temp index: ', this.tempIndex);
       }, (error: HttpErrorResponse) => {
         console.error(error);
       }
@@ -63,5 +64,8 @@ export class LayoutComponent implements OnInit, AfterViewInit {
   getTempIndex() {
     this.tempIndex = Number(this.pages[this.pageIndex]?.tempIndex);
     this.pageData = this.pages[this.pageIndex];
+    console.log('page index: ', this.pageIndex);
+    console.log('temp index: ', this.tempIndex);
+    console.log('page data ===> ', this.pageData);
   }
 }

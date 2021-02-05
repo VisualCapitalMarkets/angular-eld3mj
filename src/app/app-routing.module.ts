@@ -12,18 +12,17 @@ const routes: Routes = [
   },
   {
     path: 'collection/:id',
-    component: LayoutComponent,
-    // children: [
-    //   {
-    //     path: '',
-    //     loadChildren: () => import('./pages/pages.module').then(m => m.PagesModule)
-    //   }
-    // ]
+    component: LayoutComponent
   },
   {
     path: 'splash-screen',
     component: SplashScreenComponent
-  }
+  },
+  {
+    path: "**",
+    redirectTo: "",
+    pathMatch: "full"
+  },
 ];
 
 @NgModule({
