@@ -10,6 +10,10 @@
         .card {
             cursor: pointer;
         }
+        .myNavigation {
+            overflow: auto;
+            max-height: calc(100vh - 100px);
+        }
     }
     button {
         border: 0;

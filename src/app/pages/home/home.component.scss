@@ -28,11 +28,6 @@
         }
     }
     @media only screen and (max-width: 600px) {
-        .background {
-            img {
-                height: calc(100% - 58px);
-            }
-        }
         .content {
             margin: 1rem !important;
         }

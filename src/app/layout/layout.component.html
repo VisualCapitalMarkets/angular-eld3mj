@@ -2,9 +2,9 @@
     <div class="row content">
         <div class="col-12 p-0">
             <app-home *ngIf="tempIndex === 0" [data]="pageData"></app-home>
-            <app-focus *ngIf="tempIndex === 1" [data]="pageData"></app-focus>
-            <app-editorial *ngIf="tempIndex === 2" [data]="pageData"></app-editorial>
-            <app-news *ngIf="tempIndex === 3" [data]="pageData"></app-news>
+            <app-editorial *ngIf="tempIndex === 1" [data]="pageData"></app-editorial>
+            <app-news *ngIf="tempIndex === 2" [data]="pageData"></app-news>
+            <app-focus *ngIf="tempIndex === 3" [data]="pageData"></app-focus>
             <app-article *ngIf="tempIndex === 4" [data]="pageData"></app-article>
             <app-text-media-left *ngIf="tempIndex === 5" [data]="pageData"></app-text-media-left>
             <app-text-media-right *ngIf="tempIndex === 6" [data]="pageData"></app-text-media-right>

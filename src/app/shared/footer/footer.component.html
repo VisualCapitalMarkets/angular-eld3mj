@@ -1,13 +1,13 @@
 <div class="footer pos-f-t">
     <div #tref class="collapse" id="navbarToggleExternalContent">
         <div class="bg-light p-4">
-            <div class="mobileNavHeader">
+            <div class="mobileNavHeader myNavigation">
                 <div class="d-flex justify-content-end">
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">X</button>
                 </div>
                 <div class="logo"> {{ title }} </div>
             </div>
-            <div class="row">
+            <div class="row myNavigation">
                 <div *ngFor="let page of pages; let i = index;" class="col-xl-3 col-md-6 col-sm-12">
                     <div class="card m-3" (click)="gotoPage(i)" data-toggle="collapse" data-target="#navbarToggleExternalContent">
                         <div data-toggle="tooltip" data-placement="top" [title]="page.description" class="row no-gutters">
