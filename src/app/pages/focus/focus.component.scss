@@ -24,15 +24,15 @@
             padding: 0 86px;
             max-height: calc(100vh - 160px);
             .focus {
-                background-color: #858585;
+                background-color: #666666;
                 height: 2em;
                 width: 92px;
-                opacity: 50%;
+                opacity: 100%;
                 color: white;
             }
             .redLine {
                 border-top: 5px solid red;
-                opacity: 50%;
+                opacity: 100%;
             }
             .title {
                 border-bottom: 2px solid #e1e1e1;

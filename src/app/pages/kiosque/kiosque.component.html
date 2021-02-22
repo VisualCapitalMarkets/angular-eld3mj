@@ -2,20 +2,23 @@
     <div class="row h-100 m-0">
         <div class="col-md-6 col-sm-12 p-md-5 p-sm-0">
             <img class="logo" [src]="info?.logo">
-            <br>
+            <br><br>
             <div class="title"> {{ info?.title }} </div>
             <div class="description w-50">
                 <div class="my-3" [innerHTML]="info?.description"></div>
                 <div class="my-3" [innerHTML]="info?.publisher"></div>
+                <p class="copyright text-justify mt-3">
+                    ©2021 - D-mag by Visual Capital Markets | Geneva
+                </p>
                 <div class="socialLinkGroup d-flex align-items-center mt-5">
                     <div class="row w-100 m-0">
-                        <a [href]="info?.facebook" class="col pl-0">
+                        <!-- <a [href]="info?.facebook" class="col pl-0">
                             <img class="icon" src="assets/icons/facebook.svg">
-                        </a>
+                        </a> -->
                         <a [href]="info?.linkedin" class="col">
                             <img class="icon" src="assets/icons/linkedin.svg">
                         </a>
-                        <a [href]="info?.twitter" class="col">
+                        <!-- <a [href]="info?.twitter" class="col">
                             <img class="icon" src="assets/icons/twitter.svg">
                         </a>
                         <a [href]="info?.youtube" class="col">
@@ -23,10 +26,7 @@
                         </a>
                         <a [href]="info?.instagram" class="col pr-0">
                             <img class="icon" src="assets/icons/instagram.svg">
-                        </a>
-                        <p class="copyright text-justify mt-3">
-                            @2020 - D-mag est une marque de Visual Capital Markets SA | Genēve
-                        </p>
+                        </a> -->
                     </div>
                 </div>
             </div>
@@ -34,6 +34,7 @@
         <div class="col-md-6 col-sm-12 p-md-5 p-sm-0">
             <div class="h-100">
                 <img class="w-100" [src]="info?.collections[0]?.backgroundImage" (click)="gotoCollection(0)">
+                
                 <p> {{ info?.collections[0]?.name }} </p>
                 <div class="row m-0">
                     <div class="col-6 p-0 pr-2" *ngFor="let collection of otherCollections; let i = index;">
